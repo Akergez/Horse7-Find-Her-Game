@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a7158e59a519f697084bf00e7a32f4a1
+guid: ae44f010418cf3444b0e0f24cb09c0e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2122107185238573207
-    second: bed_0
+      213: 7482667652216324306
+    second: Square
+  - first:
+      213: 7502894752496598917
+    second: Square_1
+  - first:
+      213: 8623377449436965134
+    second: Square_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,12 +55,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
-  spriteBorder: {x: 460, y: 661, z: 637, w: 585}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 4, y: 4, z: 4, w: 4}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -90,32 +96,110 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bed_0
+      name: Square
       rect:
         serializedVersion: 2
-        x: 467
-        y: 652
-        width: 1205
-        height: 1081
+        x: 0
+        y: 124
+        width: 256
+        height: 40
       alignment: 9
-      pivot: {x: 0.4231838, y: 0.42696446}
-      border: {x: 406, y: 0, z: 0, w: 661}
+      pivot: {x: 0.51294726, y: -3.093221}
+      border: {x: 0, y: 0, z: 0, w: 38}
+      outline:
+      - - {x: -128, y: 20}
+        - {x: -128, y: -20}
+        - {x: 128, y: -20}
+        - {x: 128, y: 20}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d009a6b596c7d760800000000000000
+      internalID: 7482667652216324306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 201
+        width: 11
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7900377dd3d337d10800000000000000
-      internalID: 2122107185238573207
+      spriteID: 58fb3bd7603af1860800000000000000
+      internalID: 7502894752496598917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 178
+        width: 174
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: 18}
+        - {x: 50, y: 3}
+        - {x: 87, y: -18}
+        - {x: 87, y: -4}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09edc50a146ca770800000000000000
+      internalID: 8623377449436965134
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    physicsShape: []
+    physicsShape:
+    - - {x: -128, y: 128}
+      - {x: -128, y: -128}
+      - {x: 128, y: -128}
+      - {x: 128, y: 128}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0

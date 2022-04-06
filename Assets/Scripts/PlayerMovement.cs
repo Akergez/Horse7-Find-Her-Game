@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidBodyComponent;
 
-    public static SpriteRenderer _spriteRenderer;
+    public SpriteRenderer _spriteRenderer;
 
     private Transform _transform;
 

@@ -1,20 +1,29 @@
+using System.Collections;
 using UnityEngine;
 
-namespace DefaultNamespace
+public class PlayerBehaviour : MonoBehaviour
 {
-    public class PlayerBehaviour : MonoBehaviour
-    {
-        public Player player;
-        public void Start()
-        {
-            player = new Player();
-        }
+    public Player Player;
 
-        public void Update()
+    public void Start()
+    {
+        Player = new Player();
+        StartCoroutine(HungerRecalculateCoroutine());
+    }
+
+    public void Update()
+    {
+        var playerMovement = (PlayerMovement) FindObjectOfType(typeof(PlayerMovement));
+        if (Player.HealtPoints == 0)
+            Destroy(playerMovement._spriteRenderer);
+    }
+
+    private IEnumerator HungerRecalculateCoroutine()
+    {
+        while (true)
         {
-            player.RecalculateHunger();
-            if (player.HealtPoints == 0)
-                PlayerMovement.Destroy(PlayerMovement._spriteRenderer);
+            Player.RecalculateHunger();
+            yield return new WaitForSeconds(2);
         }
     }
 }

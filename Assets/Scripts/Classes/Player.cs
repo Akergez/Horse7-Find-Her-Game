@@ -19,5 +19,8 @@ public class Player : Entity
         else
         if (HealtPoints >= 0)
                 HealtPoints -= 1;
+        if (Hunger <= HealtPoints) return;
+        HealtPoints++;
+        Hunger -= 1;
     }
 }

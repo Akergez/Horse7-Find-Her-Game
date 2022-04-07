@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     public Player Player;
-
+    public bool isMoving;
     public void Start()
     {
         Player = new Player();
@@ -15,7 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         var playerMovement = (PlayerMovement) FindObjectOfType(typeof(PlayerMovement));
         if (Player.HealtPoints == 0)
-            Destroy(playerMovement._spriteRenderer);
+            Destroy(playerMovement.spriteRenderer);
     }
 
     private IEnumerator HungerRecalculateCoroutine()
@@ -23,6 +23,11 @@ public class PlayerBehaviour : MonoBehaviour
         while (true)
         {
             Player.RecalculateHunger();
+            if (isMoving)
+            {
+                Player.RecalculateHunger();
+                isMoving = false;
+            }
             yield return new WaitForSeconds(2);
         }
     }

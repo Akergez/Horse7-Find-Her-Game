@@ -10,7 +10,7 @@ public class HungerRenderer : MonoBehaviour
     void Update()
     {
         var pb = (PlayerBehaviour)FindObjectOfType(typeof(PlayerBehaviour));
-        HungerPoints.text = pb.Player.Hunger.ToString();
+        HungerPoints.text = (pb.Player.Hunger / 5).ToString();
         HungerPoints.color = Color.green;
     }
 }

@@ -8,7 +8,7 @@ public class HpRenderer : MonoBehaviour
     void Update()
     {
         var pb = (PlayerBehaviour)FindObjectOfType(typeof(PlayerBehaviour));
-        healthPointsText.text = pb.Player.HealtPoints.ToString();
+        healthPointsText.text = (pb.Player.HealtPoints/5).ToString();
         healthPointsText.color = Color.red;
     }
 }

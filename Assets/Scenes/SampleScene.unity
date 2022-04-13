@@ -262,7 +262,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.19506353, y: 0.70533895, z: 0}
+  m_ChunkCullingBounds: {x: 0.29579455, y: 0.70533895, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 3
@@ -4708,7 +4708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4160cf3d7bd06cbba836291137539029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  movementVector: {x: 0, y: 0}
 --- !u!212 &2097462289
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4768,7 +4769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097462287}
   m_LocalRotation: {x: -0, y: -0, z: -0.99999607, w: 0.002807703}
-  m_LocalPosition: {x: -1.876, y: 3.161, z: 0}
+  m_LocalPosition: {x: -0.211, y: 3.137, z: 0}
   m_LocalScale: {x: 0.62291336, y: -0.8152744, z: 0.95}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4833,3 +4834,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b7adf28c81422aa087ba010793fd81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
+  rigidbody2D: {fileID: 0}

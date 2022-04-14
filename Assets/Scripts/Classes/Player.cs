@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Player : Entity
 {
     public int Hunger { get; set; }
+    public PlayerBehaviour PlayerBehaviour { get; }
 
-    public Player()
+    public Player(PlayerBehaviour playerBehaviour)
     {
         HealtPoints = 100;
         Hunger = 100;
+        PlayerBehaviour = playerBehaviour;
     }
 
     public void RecalculateHunger()
@@ -24,8 +22,11 @@ public class Player : Entity
         Hunger -= 1;
     }
 
-    public void BeAttacked(int damage)
+    public void GetDamage(int damage)
     {
-        HealtPoints -= damage;
+        if (HealtPoints >= damage)
+            HealtPoints -= damage;
+        else
+            HealtPoints = 0;
     }
 }

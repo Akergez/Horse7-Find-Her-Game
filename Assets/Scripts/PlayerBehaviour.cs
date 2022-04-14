@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = System.Random;
 
 public class PlayerBehaviour : MonoBehaviour
@@ -9,10 +8,12 @@ public class PlayerBehaviour : MonoBehaviour
     public Player Player;
     public PlayerMovement playerMovement;
     public Rigidbody2D rigidbody2D;
+    public Transform Transform;
 
     public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        Transform = GetComponent<Transform>();
         Player = new Player();
         StartCoroutine(HungerRecalculateCoroutine());
     }
@@ -34,9 +35,10 @@ public class PlayerBehaviour : MonoBehaviour
             if (rigidbody2D.velocity!=Vector2.zero)
             {
                 Player.RecalculateHunger();
+                Player.RecalculateHunger();
             }
 
-            yield return new WaitForSeconds(rnd.Next());
+            yield return new WaitForSeconds(2);
         }
     }
 }

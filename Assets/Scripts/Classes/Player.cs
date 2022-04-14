@@ -23,4 +23,9 @@ public class Player : Entity
         HealtPoints++;
         Hunger -= 1;
     }
+
+    public void BeAttacked(int damage)
+    {
+        HealtPoints -= damage;
+    }
 }

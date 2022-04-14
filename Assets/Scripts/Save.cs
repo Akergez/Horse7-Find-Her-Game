@@ -20,7 +20,7 @@ public class Save
 
     public static PlayerData LoadPlayer()
     {
-        string path = Application.persistentDataPath + "/player.fun";
+        var path = Application.persistentDataPath + "/player.fun";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

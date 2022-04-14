@@ -1,23 +1,22 @@
 using System;
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 
 public class MonsterBehaviour : MonoBehaviour
 {
     public static int BasicDamage = 20;
-    public static PlayerBehaviour PlayerBehaviourr;
     public static Transform Monster;
-    bool coroutineStarted = false;
+    bool coroutineStarted;
 
     public void Start()
     {
-        PlayerBehaviourr = FindObjectOfType<PlayerBehaviour>();
         Monster = GetComponent<Transform>();
     }
 
     public void Update()
     {
-        if (PlayerBehaviourr.Player != null && !coroutineStarted)
+        if (BigData.Player != null && !coroutineStarted)
         {
             StartCoroutine(AttackCoroutine());
             coroutineStarted = true;
@@ -28,9 +27,9 @@ public class MonsterBehaviour : MonoBehaviour
     {
         while (true)
         {
-            if ((PlayerBehaviourr.Transform.position - Monster.position).Length() < 1)
+            if ((BigData.Player.PlayerBehaviour.transform.position - Monster.position).Length() < 1)
             {
-                PlayerBehaviourr.Player.BeAttacked(BasicDamage);
+                BigData.Player.GetDamage(BasicDamage);
             }
 
             yield return new WaitForSeconds(5);

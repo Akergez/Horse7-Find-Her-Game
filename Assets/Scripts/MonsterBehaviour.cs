@@ -4,33 +4,32 @@ using UnityEngine;
 
 public class MonsterBehaviour : MonoBehaviour
 {
-    public static int BasicDamage = 20;
-    public static PlayerBehaviour PlayerBehaviourr;
-    public static Transform Monster;
-    bool coroutineStarted = false;
+    private static int BasicDamage = 20;
+    private static Transform Monster;
+    private bool _coroutineStarted;
 
     public void Start()
     {
-        PlayerBehaviourr = FindObjectOfType<PlayerBehaviour>();
+        FindObjectOfType<PlayerBehaviour>();
         Monster = GetComponent<Transform>();
     }
 
     public void Update()
     {
-        if (PlayerBehaviourr.Player != null && !coroutineStarted)
+        if (!_coroutineStarted)
         {
             StartCoroutine(AttackCoroutine());
-            coroutineStarted = true;
+            _coroutineStarted = true;
         }
     }
 
-    private static IEnumerator AttackCoroutine()
+    private IEnumerator AttackCoroutine()
     {
         while (true)
         {
-            if ((PlayerBehaviourr.Transform.position - Monster.position).Length() < 1)
+            if ((GameManager.PlayerRepository.PlayerTransform.position - Monster.position).Length() < 1)
             {
-                PlayerBehaviourr.Player.BeAttacked(BasicDamage);
+                GameManager.PlayerInteractor.BeatPlayer(this, BasicDamage);
             }
 
             yield return new WaitForSeconds(5);

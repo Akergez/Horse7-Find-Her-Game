@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class HungerRenderer : MonoBehaviour
 {
-    public Text HungerPoints;
+    [FormerlySerializedAs("HungerPoints")] public Text hungerPoints;
 
     void Update()
     {
-        var pb = (PlayerBehaviour)FindObjectOfType(typeof(PlayerBehaviour));
-        HungerPoints.text = (pb.Player.Hunger / 5).ToString();
-        HungerPoints.color = Color.green;
+        hungerPoints.text = (GameManager.PlayerRepository.Hunger / 5).ToString();
+        hungerPoints.color = Color.green;
     }
 }

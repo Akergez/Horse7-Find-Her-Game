@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    [SerializeField]
+    /* [SerializeField]
     float leftLimit;
     [SerializeField]
     float rightLimit;
     [SerializeField]
     float bottomLimit;
     [SerializeField]
-    float upperLimit;
+    float upperLimit; */
 
     
     private GameObject player;
@@ -27,11 +27,11 @@ public class CameraMove : MonoBehaviour
         var pos = player.transform.position;
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
 
-        transform.position = new Vector3(
+        /* transform.position = new Vector3(
             Mathf.Clamp(transform.position.x, leftLimit, rightLimit), 
             Mathf.Clamp(transform.position.y, bottomLimit, upperLimit),
             transform.position.z
-        );
+        ); */
     }
 
     /* private void OnDrawGizmos()

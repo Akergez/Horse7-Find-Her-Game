@@ -75,7 +75,7 @@ public class Pause : MonoBehaviour
     
     public static void SaveGame()
     {
-        player = GameObject.Find("Isometric Diamond");
+        player = GameObject.Find("player");
         BinaryFormatter bf = new BinaryFormatter(); 
         FileStream file = File.Create(Application.persistentDataPath + "/MySaveData.dat"); 
         SaveData data = new SaveData(player);
@@ -95,7 +95,7 @@ public class Pause : MonoBehaviour
             FileStream file = File.Open(Application.persistentDataPath + "/MySaveData.dat", FileMode.Open);
             SaveData data = (SaveData)bf.Deserialize(file);
             file.Close();
-            GameObject.Find("Isometric Diamond").transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
+            GameObject.Find("player").transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
             Debug.Log("Game data loaded!");
         }
         else

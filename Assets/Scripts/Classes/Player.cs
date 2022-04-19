@@ -21,12 +21,4 @@ public class Player : Entity
         HealtPoints++;
         Hunger -= 1;
     }
-
-    public void GetDamage(int damage)
-    {
-        if (HealtPoints >= damage)
-            HealtPoints -= damage;
-        else
-            HealtPoints = 0;
-    }
 }

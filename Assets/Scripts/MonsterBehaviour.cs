@@ -1,33 +1,35 @@
 using System;
 using System.Collections;
+using Classes;
 using DefaultNamespace;
 using UnityEngine;
 
 public class MonsterBehaviour : MonoBehaviour
 {
     public static int BasicDamage = 20;
-    public static Transform Monster;
-    bool coroutineStarted;
+    public static Transform Transform;
+    private bool _coroutineStarted;
+    public static Monster Monster;
 
     public void Start()
     {
-        Monster = GetComponent<Transform>();
+        Transform = GetComponent<Transform>();
+        Monster = new Monster();
+        BigData.MonstersMap[this] = Monster;
     }
 
     public void Update()
     {
-        if (BigData.Player != null && !coroutineStarted)
-        {
-            StartCoroutine(AttackCoroutine());
-            coroutineStarted = true;
-        }
+        if (BigData.Player == null || _coroutineStarted) return;
+        StartCoroutine(AttackCoroutine());
+        _coroutineStarted = true;
     }
 
     private static IEnumerator AttackCoroutine()
     {
         while (true)
         {
-            if ((BigData.Player.PlayerBehaviour.transform.position - Monster.position).Length() < 1)
+            if ((BigData.Player.PlayerBehaviour.transform.position - Transform.position).Length() < 1)
             {
                 BigData.Player.GetDamage(BasicDamage);
             }

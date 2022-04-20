@@ -38,7 +38,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Load()
     {
-
         Pause.LoadGame();
         Resume();
     }

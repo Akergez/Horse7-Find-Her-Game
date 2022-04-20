@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     ///public Vector2 movementVector = Vector2.zero;
     public Animator animator;
 
-    Vector2 movement;
+    public Vector2 movement;
     
 // Start is called before the first frame update
     /* private void Start()

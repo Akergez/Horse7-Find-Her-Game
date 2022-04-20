@@ -42,6 +42,8 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 monster.Value.GetDamage(20); //ToDo расхардкорить
             }
+
+            yield return new WaitForSeconds(2);
         }
     }
 
@@ -52,12 +54,12 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (rnd.Next() % 5 == 0)
                 Player.RecalculateHunger();
-            if (rb.velocity != Vector2.zero)
+            if (playerMovement.movement != Vector2.zero)
             {
                 Player.RecalculateHunger();
             }
 
-            yield return new WaitForSeconds(rnd.Next());
+            yield return new WaitForSeconds(2); //ToDo расхардкорить
         }
     }
 }

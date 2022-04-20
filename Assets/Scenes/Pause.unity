@@ -478,7 +478,6 @@ MonoBehaviour:
   isPause: 0
   guiPause: 0
   position: []
-  player: {fileID: 0}
 --- !u!114 &1909700958
 MonoBehaviour:
   m_ObjectHideFlags: 0

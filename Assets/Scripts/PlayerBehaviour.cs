@@ -8,11 +8,11 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public Player Player;
     public PlayerMovement playerMovement;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D rb;
 
     public void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         Player = new Player();
         StartCoroutine(HungerRecalculateCoroutine());
     }
@@ -20,8 +20,8 @@ public class PlayerBehaviour : MonoBehaviour
     public void Update()
     {
         playerMovement = (PlayerMovement) FindObjectOfType(typeof(PlayerMovement));
-        if (Player.HealtPoints == 0)
-            Destroy(playerMovement.spriteRenderer);
+        ///if (Player.HealtPoints == 0)
+            ///Destroy(playerMovement.spriteRenderer);
     }
 
     private IEnumerator HungerRecalculateCoroutine()
@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if(rnd.Next()%5==0)
                 Player.RecalculateHunger();
-            if (rigidbody2D.velocity!=Vector2.zero)
+            if (rb.velocity!=Vector2.zero)
             {
                 Player.RecalculateHunger();
             }

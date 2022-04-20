@@ -6,8 +6,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/SomeStupidManGame.sln b/SomeStupidManGame.sln
---- a/SomeStupidManGame.sln	(revision ef555ce1354d1665ad5cf0d81871e71ede6c32f0)
-+++ b/SomeStupidManGame.sln	(date 1650366711813)
+--- a/SomeStupidManGame.sln	
++++ b/SomeStupidManGame.sln	
 @@ -6,10 +6,13 @@
  Global
  	GlobalSection(SolutionConfigurationPlatforms) = preSolution

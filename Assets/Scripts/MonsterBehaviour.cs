@@ -10,9 +10,13 @@ public class MonsterBehaviour : MonoBehaviour
     public static Transform Transform;
     private bool _coroutineStarted;
     public static Monster Monster;
+    public SpriteRenderer SpriteRenderer;
+    [SerializeField]
+    public int Hp;
 
     public void Start()
     {
+        SpriteRenderer = GetComponent<SpriteRenderer>();
         Transform = GetComponent<Transform>();
         Monster = new Monster();
         BigData.MonstersMap[this] = Monster;
@@ -20,9 +24,12 @@ public class MonsterBehaviour : MonoBehaviour
 
     public void Update()
     {
-        if (BigData.Player == null || _coroutineStarted) return;
-        StartCoroutine(AttackCoroutine());
+        if (!(BigData.Player == null || _coroutineStarted))
+            StartCoroutine(AttackCoroutine());
+        if(Monster.IsAlive == false)
+            Destroy(SpriteRenderer);
         _coroutineStarted = true;
+        Hp = Monster.HealtPoints;
     }
 
     private static IEnumerator AttackCoroutine()

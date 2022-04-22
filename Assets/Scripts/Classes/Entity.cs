@@ -5,7 +5,7 @@ using UnityEngine.PlayerLoop;
 
 public abstract class Entity
 {
-    public int HealtPoints { get; set; } = 100;
+    public double HealtPoints { get; set; } = 100;
 
     public bool IsAlive = true;
 
@@ -14,7 +14,7 @@ public abstract class Entity
         if (HealtPoints == 0)
             IsAlive = false;
     }
-    public void GetDamage(int damage)
+    public void GetDamage(double damage)
     {
         if (HealtPoints >= damage)
             HealtPoints -= damage;

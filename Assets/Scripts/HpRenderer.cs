@@ -2,12 +2,12 @@ using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class HpRenderer : MonoBehaviour
+public class HpRenderer : MonoBehaviour
 {
     private Image _progressBar;
     [SerializeField] private string toDisplay;
 
-    private void Start()
+    void Start()
     {
         _progressBar = GetComponent<Image>();
     }

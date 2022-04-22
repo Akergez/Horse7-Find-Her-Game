@@ -1,6 +1,8 @@
+using UnityEngine;
+
 public class Player : Entity
 {
-    public int Hunger { get; set; }
+    public double Hunger { get; set; }
     public PlayerBehaviour PlayerBehaviour { get; }
 
     public Player(PlayerBehaviour playerBehaviour)
@@ -12,17 +14,18 @@ public class Player : Entity
 
     public void RecalculateHunger()
     {
-        if (Hunger > 0)
-            Hunger -= 1;
-        else
-        if (HealtPoints >= 0)
+        if (PlayerBehaviour.playerMovement.movement != Vector2.zero)
+            if (Hunger > 0)
+                Hunger -= 1;
+            else if (HealtPoints >= 0)
                 HealtPoints -= 1;
+
         if (Hunger <= HealtPoints) return;
         HealtPoints++;
         Hunger -= 1;
     }
 
-    public void GetDamage(int damage)
+    public void GetDamage(double damage)
     {
         if (HealtPoints >= damage)
             HealtPoints -= damage;

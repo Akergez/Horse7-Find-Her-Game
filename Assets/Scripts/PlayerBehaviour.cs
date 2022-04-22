@@ -11,12 +11,15 @@ public class PlayerBehaviour : MonoBehaviour
     public Player Player;
     public PlayerMovement playerMovement;
     public Rigidbody2D rb;
+    public int Increment = 4;
 
     public void Start()
     {
+        playerMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
-        Player = new Player(this);
-        BigData.Player = Player;
+        if (BigData.Player == null)
+            BigData.Player = new Player(this);
+        Player = BigData.Player;
         StartCoroutine(HungerRecalculateCoroutine());
         StartCoroutine(AttackCoroutine());
     }
@@ -32,33 +35,40 @@ public class PlayerBehaviour : MonoBehaviour
     {
         while (true)
         {
+            var secondIncrement = 0;
             while (!Input.GetKey(KeyCode.Space))
             {
-                yield return null;
+                if(Increment == 4)
+                    yield return new WaitForSeconds(0.005f);
+                else
+                {
+                    secondIncrement++;
+                    if (secondIncrement == 20)
+                    {
+                        Increment++;
+                        secondIncrement = 0;
+                    }
+
+                    yield return new WaitForSeconds(0.005f);
+                }
             }
 
             foreach (var monster in BigData.MonstersMap.Where(x =>
                          HelpMethods.IsNear(x.Key.transform, transform, 10)))
             {
-                monster.Value.GetDamage(20); //ToDo расхардкорить
+                var damageCoef = (Increment * 0.25 * 20);
+                monster.Value.GetDamage(damageCoef);
+                Increment = 0;
             }
-
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
     private IEnumerator HungerRecalculateCoroutine()
     {
-        var rnd = new Random();
         while (true)
         {
-            if (rnd.Next() % 5 == 0)
-                Player.RecalculateHunger();
-            if (playerMovement.movement != Vector2.zero)
-            {
-                Player.RecalculateHunger();
-            }
-
+            Player.RecalculateHunger();
             yield return new WaitForSeconds(2); //ToDo расхардкорить
         }
     }

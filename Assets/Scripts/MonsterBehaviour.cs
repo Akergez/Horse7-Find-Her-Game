@@ -12,7 +12,9 @@ public class MonsterBehaviour : MonoBehaviour
     public static Monster Monster;
     public SpriteRenderer SpriteRenderer;
     [SerializeField]
-    public int Hp;
+    public Canvas HPCanvas;
+    [SerializeField]
+    public double Hp;
 
     public void Start()
     {
@@ -26,8 +28,12 @@ public class MonsterBehaviour : MonoBehaviour
     {
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
-        if(Monster.IsAlive == false)
+        if (Monster.IsAlive == false)
+        {
             Destroy(SpriteRenderer);
+            Destroy(HPCanvas);
+        }
+
         _coroutineStarted = true;
         Hp = Monster.HealtPoints;
     }

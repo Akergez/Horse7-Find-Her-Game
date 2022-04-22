@@ -1,20 +1,15 @@
-using System;
 using DefaultNamespace;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class HpRenderer : MonoBehaviour
+public abstract class HpRenderer : MonoBehaviour
 {
-    [FormerlySerializedAs("HealthPointsText")] public Text healthPointsText;
-
-    private Image ProgressBar;
-    [SerializeField]
-    private string toDisplay;
+    private Image _progressBar;
+    [SerializeField] private string toDisplay;
 
     private void Start()
     {
-        ProgressBar = GetComponent<Image>();
+        _progressBar = GetComponent<Image>();
     }
 
     void Update()
@@ -22,10 +17,10 @@ public class HpRenderer : MonoBehaviour
         switch (toDisplay)
         {
             case "hunger":
-                ProgressBar.fillAmount = (float)(BigData.Player.Hunger/5 * 0.05);
+                _progressBar.fillAmount = (float) (BigData.Player.Hunger / 5 * 0.05);
                 break;
             case "HP":
-                ProgressBar.fillAmount = (float)(BigData.Player.HealtPoints/5 * 0.05);
+                _progressBar.fillAmount = (float) (BigData.Player.HealtPoints / 5 * 0.05);
                 break;
         }
     }

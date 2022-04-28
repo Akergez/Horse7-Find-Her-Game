@@ -6078,8 +6078,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1700253520}
   - component: {fileID: 1700253521}
-  - component: {fileID: 1700253522}
   - component: {fileID: 1700253523}
+  - component: {fileID: 1700253522}
   m_Layer: 0
   m_Name: "\u0441\u0442\u043E\u043B \u0441 \u0437\u0430\u043F\u0438\u0441\u043A\u043E\u0438\u0306"
   m_TagString: Untagged
@@ -6152,22 +6152,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1700253522
-CircleCollider2D:
+--- !u!68 &1700253522
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700253519}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014942706, y: 0.018263608}
-  serializedVersion: 2
-  m_Radius: 0.24354956
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.53137064, y: 0.06694722}
+  - {x: -0.5547502, y: -0.29012728}
+  - {x: 0.08811808, y: -0.6219535}
+  - {x: 0.5703474, y: -0.33817434}
+  - {x: 0.56368756, y: -0.0040569305}
+  - {x: 0.04921794, y: -0.29728127}
+  - {x: -0.41993105, y: -0.028187275}
+  - {x: -0.5217197, y: 0.043030977}
+  - {x: -0.3898294, y: -0.006402254}
+  - {x: -0.044088125, y: 0.16675353}
+  - {x: 0.3974768, y: -0.066946745}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &1700253523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6175,7 +6190,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700253519}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 540f02d1fc0b4324aa509cccc5f8f403, type: 3}
   m_Name: 
@@ -26179,7 +26194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &6991727006777582973
 BoxCollider2D:
   m_ObjectHideFlags: 0

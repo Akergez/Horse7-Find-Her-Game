@@ -92,7 +92,7 @@ public class PoliceMove : MonoBehaviour
     void Angry()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        speed = 0.7f;
+        speed = 0.9f;
     }
     void GoBack()
     {

@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class LoadScene : MonoBehaviour
 {
     public GameObject popCenter;
-    public static bool isPopupCenter;
     public Collision2D collision;
+    [SerializeField]
+    public string SceneToLoad;
 
 
 
@@ -17,43 +19,27 @@ public class LoadScene : MonoBehaviour
         {
             collision = newCollision;
             Debug.Log("!");
-            if (isPopupCenter) Resume();
-            else ShowPopupCenter();
+            ShowPopupCenter();
         }
         
     }
 
     public void Resume()
     {
-        isPopupCenter = false;
         Time.timeScale = 1f;
-        popCenter.SetActive(isPopupCenter);
+        popCenter.SetActive(false);
     }
     
     public void ShowPopupCenter()
     {
-        isPopupCenter = true;
         Time.timeScale = 0f;
-        popCenter.SetActive(isPopupCenter);
+        popCenter.SetActive(true);
     }
     
 
     public void PressYes()
     {
-        
-        SceneManager.LoadScene("center");
-        Resume();
-    }
-    public void PressYesCenter()
-    {
-        
-        SceneManager.LoadScene("SampleScene");
-        Resume();
-    }
-
-    public void PressNoCenter()
-    {
-        
+        SceneManager.LoadScene(SceneToLoad);
         Resume();
     }
 

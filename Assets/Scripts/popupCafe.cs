@@ -9,7 +9,7 @@ public class popupCafe : MonoBehaviour
     public GameObject coins;
     public GameObject noCoins;
     public Collision2D collision;
-    int visitCount;
+    int visitCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,8 +62,8 @@ public class popupCafe : MonoBehaviour
     {
         coins.SetActive(false);
         noCoins.SetActive(true);
-        
         Destroy(popMenu);
+        Time.timeScale = 1f;
     }
 
     void FixedUpdate()

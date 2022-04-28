@@ -12357,7 +12357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d0d031caa69c94a9c3735591dfb325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 1472738578}
 --- !u!1 &888856820
 GameObject:
   m_ObjectHideFlags: 0
@@ -12712,7 +12712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7452056485447933626, guid: f8f2e7a7128c74073bbfb293f30d0646, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0029907227
+      value: 0.00061035156
       objectReference: {fileID: 0}
     - target: {fileID: 7452056485447933626, guid: f8f2e7a7128c74073bbfb293f30d0646, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13609,6 +13609,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1472738578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7452056485447933627, guid: f8f2e7a7128c74073bbfb293f30d0646, type: 3}
+  m_PrefabInstance: {fileID: 912198002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1643323728
 GameObject:
   m_ObjectHideFlags: 0

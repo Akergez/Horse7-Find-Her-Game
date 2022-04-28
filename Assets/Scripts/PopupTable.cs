@@ -6,6 +6,7 @@ public class PopupTable : MonoBehaviour
 {
     public GameObject popTable;
     public GameObject popNote;
+    public GameObject afterNote;
     public static bool isPopupTable;
     public static bool isPopupNote;
     public Collision2D collision;
@@ -74,6 +75,11 @@ public class PopupTable : MonoBehaviour
     public void PressNoNote()
     {
         ResumeNote();
+        afterNote.SetActive(true);
+    }
+    public void PressNoAfter()
+    {
+        afterNote.SetActive(false);
     }
 
     void FixedUpdate()

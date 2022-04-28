@@ -20,7 +20,7 @@ public class MonsterBehaviour : MonoBehaviour
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Transform = GetComponent<Transform>();
-        Monster = new Monster();
+        Monster = new Monster(this);
         BigData.MonstersMap[this] = Monster;
     }
 
@@ -30,12 +30,22 @@ public class MonsterBehaviour : MonoBehaviour
             StartCoroutine(AttackCoroutine());
         if (Monster.IsAlive == false)
         {
-            Destroy(SpriteRenderer);
+            Destroy(SpriteRenderer); //Todo fix death
             Destroy(HPCanvas);
+            BigData.MonstersMap.Remove(this);
+            Destroy(this);
         }
 
         _coroutineStarted = true;
         Hp = Monster.HealtPoints;
+    }
+
+    public void HandleDamage()
+    {
+        var position = Transform.position;
+        var vector = position - BigData.Player.PlayerBehaviour.transform.position;
+        position += vector.normalized * 0.3f;
+        Transform.position = position;
     }
 
     private static IEnumerator AttackCoroutine()

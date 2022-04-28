@@ -54,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
 
             foreach (var monster in BigData.MonstersMap.Where(x =>
-                         HelpMethods.IsNear(x.Key.transform, transform, 10)))
+                         HelpMethods.IsNear(x.Key.transform, transform, 10))) //ToDo разхардкорить
             {
                 var damageCoef = (Increment * 0.25 * 20);
                 monster.Value.GetDamage(damageCoef);

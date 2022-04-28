@@ -25,7 +25,7 @@ public class Player : Entity
         Hunger -= 1;
     }
 
-    public void GetDamage(double damage)
+    public override void GetDamage(double damage)
     {
         if (HealtPoints >= damage)
             HealtPoints -= damage;

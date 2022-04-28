@@ -14,7 +14,7 @@ public abstract class Entity
         if (HealtPoints == 0)
             IsAlive = false;
     }
-    public void GetDamage(double damage)
+    public virtual void GetDamage(double damage)
     {
         if (HealtPoints >= damage)
             HealtPoints -= damage;

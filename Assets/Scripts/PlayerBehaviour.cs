@@ -19,6 +19,7 @@ public class PlayerBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (BigData.Player == null)
             BigData.Player = new Player(this);
+        BigData.Player.PlayerBehaviour = this;
         Player = BigData.Player;
         StartCoroutine(HungerRecalculateCoroutine());
         StartCoroutine(AttackCoroutine());

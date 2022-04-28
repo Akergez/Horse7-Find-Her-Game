@@ -24,15 +24,19 @@ public class MonsterBehaviour : MonoBehaviour
         BigData.MonstersMap[this] = Monster;
     }
 
+    public void OnDestroy()
+    {
+        BigData.MonstersMap.Remove(this);
+        Destroy(SpriteRenderer); //Todo fix death
+        Destroy(HPCanvas);
+    }
+
     public void Update()
     {
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
         if (Monster.IsAlive == false)
         {
-            Destroy(SpriteRenderer); //Todo fix death
-            Destroy(HPCanvas);
-            BigData.MonstersMap.Remove(this);
             Destroy(this);
         }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterMove : MonoBehaviour
 {
     public Transform point;
-    public float speed;
+    public float speed = 0.5f;
     public int positionOfPatrol;
     bool movingRight;
     Transform player;
@@ -18,6 +18,7 @@ public class MonsterMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

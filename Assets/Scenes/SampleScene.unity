@@ -4289,7 +4289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4160cf3d7bd06cbba836291137539029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 1260318265}
   rb: {fileID: 1260318260}
   Increment: 4
 --- !u!114 &1260318265

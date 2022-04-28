@@ -62,6 +62,7 @@ public class popupCafe : MonoBehaviour
     {
         coins.SetActive(false);
         noCoins.SetActive(true);
+        
         Destroy(popMenu);
     }
 

@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class LoadScene : MonoBehaviour
 {
     public GameObject popCenter;
+    public GameObject popLabirint;
     public Collision2D collision;
     [SerializeField]
     public string SceneToLoad;
@@ -36,7 +37,11 @@ public class LoadScene : MonoBehaviour
         popCenter.SetActive(true);
     }
     
-
+    public void PressYesLabirint()
+    {
+        SceneManager.LoadScene("Maze");
+        Resume();
+    }
     public void PressYes()
     {
         SceneManager.LoadScene(SceneToLoad);

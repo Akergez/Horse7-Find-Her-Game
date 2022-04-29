@@ -19,9 +19,16 @@ public class PlayerBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (BigData.Player == null)
             BigData.Player = new Player(this);
+        BigData.Player.PlayerBehaviour = this;
         Player = BigData.Player;
         StartCoroutine(HungerRecalculateCoroutine());
         StartCoroutine(AttackCoroutine());
+    }
+
+    public void OnDestroy()
+    {
+        StopCoroutine(HungerRecalculateCoroutine());
+        StopCoroutine(AttackCoroutine());
     }
 
     public void Update()
@@ -54,7 +61,7 @@ public class PlayerBehaviour : MonoBehaviour
             }
 
             foreach (var monster in BigData.MonstersMap.Where(x =>
-                         HelpMethods.IsNear(x.Key.transform, transform, 10))) //ToDo разхардкорить
+                         HelpMethods.IsNear(x.Key.transform, transform, 3))) //ToDo разхардкорить
             {
                 var damageCoef = (Increment * 0.25 * 20);
                 monster.Value.GetDamage(damageCoef);

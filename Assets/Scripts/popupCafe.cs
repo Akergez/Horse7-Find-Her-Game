@@ -64,6 +64,7 @@ public class popupCafe : MonoBehaviour
         noCoins.SetActive(true);
         
         Destroy(popMenu);
+        Time.timeScale = 1f;
     }
 
     void FixedUpdate()

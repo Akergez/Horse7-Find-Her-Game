@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : Entity
 {
     public double Hunger { get; set; }
-    public PlayerBehaviour PlayerBehaviour { get; }
+    public PlayerBehaviour PlayerBehaviour { get; set; }
 
     public Player(PlayerBehaviour playerBehaviour)
     {

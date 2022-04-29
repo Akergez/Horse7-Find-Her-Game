@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PopupTable : MonoBehaviour
 {
     public GameObject popTable;
     public GameObject popNote;
     public GameObject afterNote;
+    public GameObject labirint;
     public static bool isPopupTable;
     public static bool isPopupNote;
     public Collision2D collision;

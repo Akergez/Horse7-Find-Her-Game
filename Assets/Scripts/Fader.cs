@@ -10,24 +10,24 @@ bool fadeIn;
 bool fadeOut;
 float alphaColor;
 
-public Image fadeImage; //Черная картинка растянутая на весь экран, с 0 прозрачностью и выключенным рейкаст таргетом, ее можно будет отключить в инспекторе, чтобы не мешала
-public int loadScene = 1; //Номер загружаемой сцены
-public Color fadeInColor; //Выбираем желаемый цвет при окончании сцены
-public Color fadeOutColor; //Выбираем желаемый цвет при старте сцены
+public Image fadeImage;
+public int loadScene = 1;
+public Color fadeInColor;
+public Color fadeOutColor;
 
-    private void Start() { //Вызывается автоматически при старте сцены
-        fadeImage.gameObject.SetActive(true); //Включаем картинку
-        fadeImage.color = new Color(fadeOutColor.r, fadeOutColor.g, fadeOutColor.b, 1f); // Ставим стартовый цвет
-        fadeOut = true; //Запускаем процесс
+    private void Start() { 
+        fadeImage.gameObject.SetActive(true); 
+        fadeImage.color = new Color(fadeOutColor.r, fadeOutColor.g, fadeOutColor.b, 1f); 
+        fadeOut = true; 
     }
 
-    public void ButtonStartGame() { //Вызывается из UI
+    public void ButtonStartGame() { 
         fadeImage.gameObject.SetActive(true);
         fadeImage.color = new Color(fadeInColor.r, fadeInColor.g, fadeInColor.b, 0);
         fadeIn = true;
     }
 
-    private void StartScene() { //Метод запускающий сцену, вызывается в апдейте, когда прозрачность картинки станет достаточно низкой, т.е. экран затемнится
+    private void StartScene() { 
         SceneManager.LoadScene(loadScene);
     }
 

@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 30d4f601b05f19e429eaa7a39f59b956
   - enabled: 1
+    path: Assets/Scenes/DreamPrologue.unity
+    guid: c85f36675e2b8dd499a87ded9db66282
+  - enabled: 1
+    path: Assets/Scenes/CenterPrologue.unity
+    guid: 7cbc3fb5ff95e0740bc0b48dd0795502
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

@@ -42,6 +42,18 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadScene("Maze");
         Resume();
     }
+
+    public void PressYesDreamRoom()
+    {
+        SceneManager.LoadScene("DreamPrologue");
+        Resume();
+    }
+
+    public void PressYesDreamCenter()
+    {
+        SceneManager.LoadScene("CenterPrologue");
+        Resume();
+    }
     public void PressYes()
     {
         SceneManager.LoadScene(SceneToLoad);

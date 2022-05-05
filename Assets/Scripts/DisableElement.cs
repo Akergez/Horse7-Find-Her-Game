@@ -18,7 +18,7 @@ namespace DefaultNamespace
             {
                 yield return null;
             }
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(6);
             GameObject.SetActive(false);
         }
     }

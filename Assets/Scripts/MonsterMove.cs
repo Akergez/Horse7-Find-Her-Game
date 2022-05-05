@@ -79,8 +79,6 @@ public class MonsterMove : MonoBehaviour
     }
     void Angry()
     {
-        if((player.position - transform.position).Length() <= 20)
-            return;
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         speed = 0.7f;
     }

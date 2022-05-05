@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="add on destroy">
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterBattleRenderer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterBattleRenderer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Classes/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Classes/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/center.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SomeStupidManGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SomeStupidManGame.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,43 +36,25 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterHpRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/h.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/popupCafe.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/6c/4c16b27c/ScriptableRuntimeReflectionSystemWrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PopupTable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/Monster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HelpMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/cb/4b7deb4f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/55/011288a4/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BigData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b29983a7d024e6c922d3ba40ccc74e96600/43/f12fdf68/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/29/fa7a5ff7/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/95/3ce3f1c2/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterHpRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/cb/4b7deb4f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/29/fa7a5ff7/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,10 +83,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="259293">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="259293" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -131,6 +119,7 @@
       <workItem from="1650600147471" duration="352000" />
       <workItem from="1651065613774" duration="2552000" />
       <workItem from="1651144903793" duration="639000" />
+      <workItem from="1651744879179" duration="2052000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -181,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651173340012</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="stupid woman">
+      <created>1651205248522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651205248522</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +207,26 @@
     <MESSAGE value="finish start scene" />
     <MESSAGE value="fix canvases" />
     <MESSAGE value="add on destroy" />
-    <option name="LAST_COMMIT_MESSAGE" value="add on destroy" />
+    <MESSAGE value="stupid woman" />
+    <option name="LAST_COMMIT_MESSAGE" value="stupid woman" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/MonsterBattleRenderer.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MonsterBattleRenderer.cs" initialLine="13" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="297" />
+            </startOffsets>
+            <endOffsets>
+              <option value="309" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

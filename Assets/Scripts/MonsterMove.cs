@@ -5,14 +5,13 @@ using UnityEngine;
 public class MonsterMove : MonoBehaviour
 {
     public Transform point;
+    Transform player;
     public float speed = 0.5f;
     public int positionOfPatrol;
-    bool movingRight;
-    Transform player;
     public float stoppingDistance;
-    bool chill = false;
-    bool angry = false;
-    bool goBack = false;
+    bool movingRight;
+    bool chill;
+    bool angry;
     
     
     // Start is called before the first frame update
@@ -26,55 +25,39 @@ public class MonsterMove : MonoBehaviour
     void Update()
     {
         if (Vector2.Distance(transform.position, point.position) < positionOfPatrol && angry == false)
-        {
             chill = true;
-        }
 
         if (Vector2.Distance(transform.position, player.position) < stoppingDistance)
         {
             angry = true;
             chill = false;
-            goBack = false;
         }
 
         if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
-        {
-            goBack = true;
             angry = false;
-        }
 
-        if (chill == true)
-        {
+        if (chill)
             Chill();
-        }
-        else if (angry == true)
-        {
+
+        else if (angry)
             Angry();
-        }
-        else if (goBack == true)
-        {
+        
+        else
             GoBack();
-        }
     }
     void Chill()
     {
         if (transform.position.x > point.position.x + positionOfPatrol)
-        {
             movingRight = false;
-        }
+
         else if (transform.position.x < point.position.x - positionOfPatrol)
-        {
             movingRight = true;
-        }
 
         if (movingRight)
-        {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
-        }
+
         else
-        {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
-        }
     }
     void Angry()
     {

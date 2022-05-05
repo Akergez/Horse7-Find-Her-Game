@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716, y: 294.30005}
+  m_AnchoredPosition: {x: -405, y: 358}
   m_SizeDelta: {x: 116.4, y: 104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &280135071
@@ -244,6 +244,7 @@ MonoBehaviour:
   speed: 0.5
   positionOfPatrol: 2
   stoppingDistance: 1
+  "\u0421\u043E\u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u0435": 0
 --- !u!114 &280135075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +261,7 @@ MonoBehaviour:
   HPCanvas: {fileID: 2053109750}
   Hp: 0
   HpRenderer: {fileID: 0}
+  attackReadyness: 0
 --- !u!212 &280135076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -382,7 +384,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.102115
+  orthographic size: 1.4322374
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1177,14 +1179,14 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 282642684}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
@@ -3544,7 +3546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716, y: 332}
+  m_AnchoredPosition: {x: -405, y: 385}
   m_SizeDelta: {x: 116.4, y: 104.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1856417961
@@ -10621,7 +10623,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 282642684}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -10756,6 +10758,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1050, y: 241}
+  m_AnchoredPosition: {x: -734, y: 317}
   m_SizeDelta: {x: 116.4, y: 104.02}
   m_Pivot: {x: 0.5, y: 0.5}

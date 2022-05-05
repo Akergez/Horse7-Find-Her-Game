@@ -15,5 +15,10 @@ namespace DefaultNamespace
             color.a = (float) (MonsterBehaviour.attackReadyness / 5);
             SpriteRenderer.color = color;
         }
+
+        public void OnDestroy()
+        {
+            Destroy(SpriteRenderer);
+        }
     }
 }

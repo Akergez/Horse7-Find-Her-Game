@@ -17,6 +17,8 @@ public class MonsterBehaviour : MonoBehaviour
     public double Hp;
     [SerializeField]
     public MonsterHpRenderer HpRenderer;
+    [SerializeField]
+    public MonsterBattleRenderer MonsterBattleRenderer;
 
     public double attackReadyness;
 
@@ -31,6 +33,7 @@ public class MonsterBehaviour : MonoBehaviour
     public void OnDestroy()
     {
         BigData.MonstersMap.Remove(this);
+        Destroy(MonsterBattleRenderer);
         Destroy(SpriteRenderer); //Todo fix death
         Destroy(HPCanvas);
         Destroy(HpRenderer);

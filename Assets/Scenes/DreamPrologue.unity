@@ -341,7 +341,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 997677155}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: PressYesDreamCenter
+        m_MethodName: PressYes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3337,7 +3337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popCenter: {fileID: 1878896941}
-  SceneToLoad: center
+  SceneToLoad: CenterPrologue
 --- !u!114 &997677156
 MonoBehaviour:
   m_ObjectHideFlags: 0

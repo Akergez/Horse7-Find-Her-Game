@@ -35,24 +35,6 @@ public class LoadScene : MonoBehaviour
         Time.timeScale = 0f;
         popCenter.SetActive(true);
     }
-    
-    public void PressYesLabirint()
-    {
-        SceneManager.LoadScene("Maze");
-        Resume();
-    }
-
-    public void PressYesDreamRoom()
-    {
-        SceneManager.LoadScene("DreamPrologue");
-        Resume();
-    }
-
-    public void PressYesDreamCenter()
-    {
-        SceneManager.LoadScene("CenterPrologue");
-        Resume();
-    }
     public void PressYes()
     {
         SceneManager.LoadScene(SceneToLoad);

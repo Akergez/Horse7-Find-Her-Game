@@ -12,6 +12,7 @@ public class PopupTable : MonoBehaviour
     public static bool isPopupTable;
     public static bool isPopupNote;
     public Collision2D collision;
+    int visitCount;
 
     void Update()
     {
@@ -25,12 +26,16 @@ public class PopupTable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D newCollision)
     {
-        if (newCollision.gameObject.CompareTag("Player"))
+        if (newCollision.gameObject.CompareTag("Player") && visitCount == 0)
         {
             collision = newCollision;
             Debug.Log("Popup Table");
             if (isPopupTable) Resume();
-            else ShowPopupTable();
+            else
+            {
+                visitCount += 1;
+                ShowPopupTable();
+            }
         }
         
     }
@@ -52,7 +57,7 @@ public class PopupTable : MonoBehaviour
     public void ShowPopupTable()
     {
         isPopupTable = true;
-        ///Time.timeScale = 0f;
+        Time.timeScale = 0f;
         popTable.SetActive(isPopupTable);
     }
     

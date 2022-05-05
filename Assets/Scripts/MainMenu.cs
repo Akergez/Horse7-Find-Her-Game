@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGameButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("DreamPrologue");
     }
     public void ContinueButton()
     {

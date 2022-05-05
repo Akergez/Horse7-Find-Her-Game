@@ -13,6 +13,7 @@ public class MonsterMove : MonoBehaviour
     bool chill = false;
     bool angry = false;
     bool goBack = false;
+    [SerializeField] public double Соотношение;
     
     
     // Start is called before the first frame update

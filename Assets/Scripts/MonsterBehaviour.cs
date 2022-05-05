@@ -17,6 +17,10 @@ public class MonsterBehaviour : MonoBehaviour
     public double Hp;
     [SerializeField]
     public MonsterHpRenderer HpRenderer;
+    [SerializeField]
+    public MonsterBattleRenderer MonsterBattleRenderer;
+
+    public double attackReadyness;
 
     public void Start()
     {
@@ -29,6 +33,7 @@ public class MonsterBehaviour : MonoBehaviour
     public void OnDestroy()
     {
         BigData.MonstersMap.Remove(this);
+        Destroy(MonsterBattleRenderer);
         Destroy(SpriteRenderer); //Todo fix death
         Destroy(HPCanvas);
         Destroy(HpRenderer);
@@ -55,16 +60,22 @@ public class MonsterBehaviour : MonoBehaviour
         Transform.position = position;
     }
 
-    private static IEnumerator AttackCoroutine()
+    private IEnumerator AttackCoroutine()
     {
         while (true)
         {
-            if ((BigData.Player.PlayerBehaviour.transform.position - Transform.position).Length() < 1)
+            if (Math.Abs(attackReadyness - 5) < 1e-9)
             {
-                BigData.Player.GetDamage(BasicDamage);
+                if ((BigData.Player.PlayerBehaviour.transform.position - Transform.position).Length() <= 0.6)
+                {
+                    BigData.Player.GetDamage(BasicDamage);
+                }
+                attackReadyness = 0;
+
             }
 
-            yield return new WaitForSeconds(5);
+            attackReadyness += 0.1;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

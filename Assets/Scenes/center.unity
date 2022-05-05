@@ -26877,6 +26877,7 @@ GameObject:
   - component: {fileID: 1189814370}
   - component: {fileID: 1189814373}
   - component: {fileID: 1189814374}
+  - component: {fileID: 1189814369}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -26884,6 +26885,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1189814369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189814368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcffb2ee620c894194c6018b3e92b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popCenter: {fileID: 2100235752}
+  SceneToLoad: Maze
 --- !u!61 &1189814370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27019,7 +27034,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189814368}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f04a6f01d9004c4a852665b8b06ef07, type: 3}
   m_Name: 
@@ -30427,7 +30442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popCenter: {fileID: 1713947216}
-  popLabirint: {fileID: 0}
   SceneToLoad: SampleScene
 --- !u!61 &1781844553
 BoxCollider2D:
@@ -30599,7 +30613,7 @@ Transform:
   m_GameObject: {fileID: 1796387143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.7163, y: -6.7395, z: 0}
-  m_LocalScale: {x: 1.0171, y: 1.0257, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1972942978}
   m_RootOrder: 2

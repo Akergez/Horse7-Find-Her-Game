@@ -7,7 +7,6 @@ using UnityEngine.Serialization;
 public class LoadScene : MonoBehaviour
 {
     public GameObject popCenter;
-    public GameObject popLabirint;
     public Collision2D collision;
     [SerializeField]
     public string SceneToLoad;

@@ -13,6 +13,7 @@ public class MonsterMove : MonoBehaviour
     bool chill = false;
     bool angry = false;
     bool goBack = false;
+    [SerializeField] public double Соотношение;
     
     
     // Start is called before the first frame update
@@ -78,6 +79,8 @@ public class MonsterMove : MonoBehaviour
     }
     void Angry()
     {
+        if((player.position - transform.position).Length() <= 20)
+            return;
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         speed = 0.7f;
     }

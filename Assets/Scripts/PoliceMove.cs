@@ -8,7 +8,7 @@ public class PoliceMove : MonoBehaviour
     public Transform point;
     public float speed = 0.5f;
     public int positionOfPatrol;
-    bool movingRight;
+    public bool movingRight;
     Transform player;
     public Collision2D collision;
     public float stoppingDistance;
@@ -20,7 +20,6 @@ public class PoliceMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

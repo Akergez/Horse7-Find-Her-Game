@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed = 1f;
 
+
     ///public SpriteRenderer spriteRenderer;
 
     ///private Transform _transform;
@@ -55,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         var speedMultiplier = movement.x != 0 && movement.y != 0 ? 0.75f : 1f;
-        rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * speedMultiplier));
+        if (!Blockpost.isPopupDialog)
+            rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * speedMultiplier));
+        
+
     }
 }

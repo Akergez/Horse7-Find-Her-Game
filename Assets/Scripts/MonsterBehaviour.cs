@@ -20,6 +20,8 @@ public class MonsterBehaviour : MonoBehaviour
     [SerializeField]
     public MonsterBattleRenderer MonsterBattleRenderer;
 
+    [SerializeField] public double AttackRadius;
+
     public double attackReadyness;
 
     public void Start()
@@ -43,7 +45,7 @@ public class MonsterBehaviour : MonoBehaviour
     {
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
-        if (Monster.IsAlive == false)
+        if (!BigData.MonstersMap[this].IsAlive)
         {
             Destroy(this);
         }
@@ -66,7 +68,7 @@ public class MonsterBehaviour : MonoBehaviour
         {
             if (Math.Abs(attackReadyness - 5) < 1e-9)
             {
-                if ((BigData.Player.PlayerBehaviour.transform.position - Transform.position).Length() <= 0.6)
+                if ((BigData.Player.PlayerBehaviour.transform.position - Transform.position).Length() <= AttackRadius)
                 {
                     BigData.Player.GetDamage(BasicDamage);
                 }

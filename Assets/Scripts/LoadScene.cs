@@ -32,7 +32,7 @@ public class LoadScene : MonoBehaviour
     
     public void ShowPopupCenter()
     {
-        Time.timeScale = 0f;
+        ///Time.timeScale = 0f;
         popCenter.SetActive(true);
     }
     public void PressYes()

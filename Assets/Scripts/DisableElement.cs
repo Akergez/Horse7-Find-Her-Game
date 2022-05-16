@@ -1,25 +1,27 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DefaultNamespace
 {
     public class DisableElement : MonoBehaviour
     {
-        [SerializeField] public GameObject GameObject;
+        [FormerlySerializedAs("GameObject")] [SerializeField] public GameObject ObjectToDisable;
+        [FormerlySerializedAs("SecondsBeforeDisable")] [SerializeField] public float secondsBeforeDisable;
 
         public void Start()
         {
             StartCoroutine(DisableObjectCoroutine());
         }
 
-        public IEnumerator DisableObjectCoroutine()
+        private IEnumerator DisableObjectCoroutine()
         {
-            while (!GameObject.activeSelf)
+            while (!ObjectToDisable.activeSelf)
             {
                 yield return null;
             }
-            yield return new WaitForSeconds(6);
-            GameObject.SetActive(false);
+            yield return new WaitForSeconds(secondsBeforeDisable);
+            ObjectToDisable.SetActive(false);
         }
     }
 }

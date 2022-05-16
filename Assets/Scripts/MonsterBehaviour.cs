@@ -4,24 +4,17 @@ using Classes;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class MonsterBehaviour : MonoBehaviour
 {
     public static int BasicDamage = 20;
-    public static Transform Transform;
+    public Transform Transform;
     private bool _coroutineStarted;
     public static Monster Monster;
-    public SpriteRenderer SpriteRenderer;
-    [SerializeField]
-    public Canvas HPCanvas;
-    [SerializeField]
-    public double Hp;
-    [SerializeField]
-    public MonsterHpRenderer HpRenderer;
-    [SerializeField]
-    public MonsterBattleRenderer MonsterBattleRenderer;
+    [FormerlySerializedAs("MonsterBody")] [SerializeField] public GameObject monsterBody;
 
-    [SerializeField] public double AttackRadius;
+    [FormerlySerializedAs("AttackRadius")] [SerializeField] public double attackRadius;
 
     public double attackReadyness;
 
@@ -32,7 +25,7 @@ public class MonsterBehaviour : MonoBehaviour
         nmAgent = GetComponent<NavMeshAgent>();
         nmAgent.updateRotation = false;
         nmAgent.updateUpAxis = false;
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        GetComponent<SpriteRenderer>();
         Transform = GetComponent<Transform>();
         Monster = new Monster(this);
         BigData.MonstersMap[this] = Monster;
@@ -41,10 +34,7 @@ public class MonsterBehaviour : MonoBehaviour
     public void OnDestroy()
     {
         BigData.MonstersMap.Remove(this);
-        Destroy(MonsterBattleRenderer);
-        Destroy(SpriteRenderer); //Todo fix death
-        Destroy(HPCanvas);
-        Destroy(HpRenderer);
+        Destroy(monsterBody);
     }
 
     public void Update()
@@ -58,15 +48,14 @@ public class MonsterBehaviour : MonoBehaviour
         }
 
         _coroutineStarted = true;
-        Hp = Monster.HealtPoints;
     }
 
     public void HandleDamage()
-    {
+    {/*
         var position = Transform.position;
         var vector = position - BigData.Player.PlayerBehaviour.transform.position;
         position += vector.normalized * 0.3f;
-        Transform.position = position;
+        Transform.position = position;*/
     }
 
     private IEnumerator AttackCoroutine()
@@ -75,12 +64,12 @@ public class MonsterBehaviour : MonoBehaviour
         {
             if (Math.Abs(attackReadyness - 5) < 1e-9)
             {
-                if ((BigData.Player.PlayerBehaviour.transform.position - Transform.position).Length() <= AttackRadius)
+                if (HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, attackRadius))
                 {
                     BigData.Player.GetDamage(BasicDamage);
                 }
-                attackReadyness = 0;
 
+                attackReadyness = 0;
             }
 
             attackReadyness += 0.1;

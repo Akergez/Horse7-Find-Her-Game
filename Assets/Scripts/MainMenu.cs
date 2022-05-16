@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Active Scene : " + SceneManager.GetActiveScene().name);
     }
 
-    public IEnumerator WaitForSceneLoad(Scene scene)
+    private IEnumerator WaitForSceneLoad(Scene scene)
     {
         while(!scene.isLoaded)
         {

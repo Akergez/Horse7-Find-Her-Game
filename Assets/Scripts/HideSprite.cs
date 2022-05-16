@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class HideSprite : MonoBehaviour
 {
-    private SpriteRenderer _renderer;
+    private SpriteRenderer _spriteToHide;
 
     private void Start()
     {
-        _renderer = GetComponent<SpriteRenderer>();
-        _renderer.enabled = false;
+        _spriteToHide = GetComponent<SpriteRenderer>();
+        _spriteToHide.enabled = false;
     }
 }

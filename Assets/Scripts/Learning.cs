@@ -5,19 +5,11 @@ using UnityEngine;
 public class Learning : MonoBehaviour
 {
     [SerializeField] public GameObject GameObject;
-    // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 0f;
         GameObject.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void MoveToScene()
     {
         Time.timeScale = 1f;

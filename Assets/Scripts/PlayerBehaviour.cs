@@ -1,22 +1,27 @@
-using System;
 using System.Collections;
 using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using Random = System.Random;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     public Player Player;
-    public PlayerMovement playerMovement;
     public Rigidbody2D rb;
     public int Increment = 4;
+    public float moveSpeed = 1f;
+    public Animator animator;
+    public Vector2 movement;
+    public bool IsPlayerFreezed { get; private set; }
+    [SerializeField]
+    public float AttackRadius;
+    
+    [SerializeField]
+    public double Hp;
+
 
     public void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
         if (BigData.Player == null)
             BigData.Player = new Player(this);
@@ -34,20 +39,36 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Death()
     {
-        
         BigData.ReloadData();
         SceneManager.LoadScene("MazeDeadScreen");
     }
+
     public void Update()
     {
-        playerMovement = (PlayerMovement) FindObjectOfType(typeof(PlayerMovement));
+        Hp = BigData.Player.HealtPoints;
         if (!BigData.Player.IsAlive)
         {
             Death();
             Destroy(this);
         }
-        ///if (Player.HealtPoints == 0)
-        ///Destroy(playerMovement.spriteRenderer);
+
+        HandleControls();
+    }
+
+    void HandleControls()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
+    void FixedUpdate()
+    {
+        var speedMultiplier = movement.x != 0 && movement.y != 0 ? 0.75f : 1f;
+        if (!IsPlayerFreezed)
+            rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * speedMultiplier));
     }
 
     public IEnumerator AttackCoroutine()
@@ -57,7 +78,7 @@ public class PlayerBehaviour : MonoBehaviour
             var secondIncrement = 0;
             while (!Input.GetKey(KeyCode.Space))
             {
-                if(Increment == 4)
+                if (Increment == 4)
                     yield return new WaitForSeconds(0.005f);
                 else
                 {
@@ -73,12 +94,13 @@ public class PlayerBehaviour : MonoBehaviour
             }
 
             foreach (var monster in BigData.MonstersMap.Where(x =>
-                         HelpMethods.IsNear(x.Key.transform, transform, 0.6))) //ToDo разхардкорить
+                         HelpMethods.IsNear(x.Key.transform, transform, AttackRadius))) //ToDo разхардкорить
             {
                 var damageCoef = (Increment * 0.25 * 20);
                 monster.Value.GetDamage(damageCoef);
-                Increment = 0;
             }
+            Increment = 0;
+
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -90,5 +112,10 @@ public class PlayerBehaviour : MonoBehaviour
             Player.RecalculateHunger();
             yield return new WaitForSeconds(2); //ToDo расхардкорить
         }
+    }
+
+    public void SetPlayerFreezed(bool isFreezed)
+    {
+        IsPlayerFreezed = isFreezed;
     }
 }

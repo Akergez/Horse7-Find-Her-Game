@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -7,9 +5,9 @@ using UnityEngine.Serialization;
 public class LoadScene : MonoBehaviour
 {
     public GameObject popCenter;
-    public Collision2D collision;
-    [SerializeField]
-    public string SceneToLoad;
+    private Collision2D _collision;
+    [FormerlySerializedAs("SceneToLoad")] [SerializeField]
+    public string sceneToLoad;
 
 
 
@@ -17,27 +15,26 @@ public class LoadScene : MonoBehaviour
     {
         if (newCollision.gameObject.CompareTag("Player"))
         {
-            collision = newCollision;
+            _collision = newCollision;
             Debug.Log("!");
             ShowPopupCenter();
         }
         
     }
 
-    public void Resume()
+    private void Resume()
     {
         Time.timeScale = 1f;
         popCenter.SetActive(false);
     }
-    
-    public void ShowPopupCenter()
+
+    private void ShowPopupCenter()
     {
-        ///Time.timeScale = 0f;
         popCenter.SetActive(true);
     }
     public void PressYes()
     {
-        SceneManager.LoadScene(SceneToLoad);
+        SceneManager.LoadScene(sceneToLoad);
         Resume();
     }
 
@@ -45,11 +42,12 @@ public class LoadScene : MonoBehaviour
     {
         Resume();
     }
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
-        if (collision != null && collision.contactCount == 0)
+        if (_collision != null && _collision.contactCount == 0)
         {
-            collision = null;
+            _collision = null;
             Resume();
         }
     }

@@ -5,37 +5,34 @@ using UnityEngine;
 public class DreamDisableNote : MonoBehaviour
 {
     public GameObject popTable;
-    public static bool isPopupTable;
-    public Collision2D collision;
-    int visitCount;
-    // Start is called before the first frame update
+    private static bool _isPopupTable;
+
+    private int _visitCount;
+
     private void OnCollisionEnter2D(Collision2D newCollision)
     {
-        if (newCollision.gameObject.CompareTag("Player") && visitCount == 0)
+        if (newCollision.gameObject.CompareTag("Player") && _visitCount == 0)
         {
-            collision = newCollision;
             Debug.Log("Popup Table");
-            if (isPopupTable) Resume();
+            if (_isPopupTable) Resume();
             else
             {
-                visitCount += 1;
+                _visitCount += 1;
                 ShowPopupTable();
             }
         }
     }
-    
-    public void Resume()
+
+    private void Resume()
     {
-        isPopupTable = false;
-        ///Time.timeScale = 1f;
-        popTable.SetActive(isPopupTable);
+        _isPopupTable = false;
+        popTable.SetActive(_isPopupTable);
     }
 
-    public void ShowPopupTable()
+    private void ShowPopupTable()
     {
-        isPopupTable = true;
-        ///Time.timeScale = 0f;
-        popTable.SetActive(isPopupTable);
+        _isPopupTable = true;
+        popTable.SetActive(_isPopupTable);
     }
 
     public void PressNo()

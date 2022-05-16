@@ -14,7 +14,7 @@ public class Player : Entity
 
     public void RecalculateHunger()
     {
-        if (PlayerBehaviour.playerMovement.movement != Vector2.zero)
+        if (PlayerBehaviour.movement != Vector2.zero)
             if (Hunger > 0)
                 Hunger -= 1;
             else if (HealtPoints >= 0)

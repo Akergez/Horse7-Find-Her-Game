@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class MonsterHpRenderer : MonoBehaviour
+public class MonsterParameterRenderer : MonoBehaviour
 {
     private Image _progressBar;
     [FormerlySerializedAs("ParameterToRender")] [SerializeField] public EntityParameter parameterToRender;

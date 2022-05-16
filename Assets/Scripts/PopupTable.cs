@@ -13,17 +13,6 @@ public class PopupTable : MonoBehaviour
     public static bool isPopupNote;
     public Collision2D collision;
     int visitCount;
-
-    void Update()
-    {
-        
-    }
-
-    void Start()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D newCollision)
     {
         if (newCollision.gameObject.CompareTag("Player") && visitCount == 0)

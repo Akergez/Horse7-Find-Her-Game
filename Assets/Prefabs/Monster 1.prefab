@@ -105,6 +105,7 @@ MonoBehaviour:
   Hp: 0
   HpRenderer: {fileID: 5742965589892473058}
   MonsterBattleRenderer: {fileID: 5742965590471249696}
+  AttackRadius: 0
   attackReadyness: 0
 --- !u!114 &5742965588938905539
 MonoBehaviour:

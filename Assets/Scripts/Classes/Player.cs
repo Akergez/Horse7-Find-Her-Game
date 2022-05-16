@@ -31,5 +31,7 @@ public class Player : Entity
             HealtPoints -= damage;
         else
             HealtPoints = 0;
+        if (HealtPoints == 0)
+            IsAlive = false;
     }
 }

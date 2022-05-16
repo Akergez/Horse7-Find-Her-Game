@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Random = System.Random;
 
@@ -31,9 +32,20 @@ public class PlayerBehaviour : MonoBehaviour
         StopCoroutine(AttackCoroutine());
     }
 
+    public void Death()
+    {
+        
+        BigData.ReloadData();
+        SceneManager.LoadScene("MazeDeadScreen");
+    }
     public void Update()
     {
         playerMovement = (PlayerMovement) FindObjectOfType(typeof(PlayerMovement));
+        if (!BigData.Player.IsAlive)
+        {
+            Death();
+            Destroy(this);
+        }
         ///if (Player.HealtPoints == 0)
         ///Destroy(playerMovement.spriteRenderer);
     }

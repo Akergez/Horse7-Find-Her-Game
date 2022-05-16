@@ -3,6 +3,7 @@ using System.Collections;
 using Classes;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MonsterBehaviour : MonoBehaviour
 {
@@ -24,8 +25,13 @@ public class MonsterBehaviour : MonoBehaviour
 
     public double attackReadyness;
 
+    public NavMeshAgent nmAgent;
+
     public void Start()
     {
+        nmAgent = GetComponent<NavMeshAgent>();
+        nmAgent.updateRotation = false;
+        nmAgent.updateUpAxis = false;
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Transform = GetComponent<Transform>();
         Monster = new Monster(this);
@@ -43,6 +49,7 @@ public class MonsterBehaviour : MonoBehaviour
 
     public void Update()
     {
+        nmAgent.SetDestination(BigData.Player.PlayerBehaviour.transform.position);
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
         if (!BigData.MonstersMap[this].IsAlive)

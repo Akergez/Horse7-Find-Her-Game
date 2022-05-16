@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Blockpost : MonoBehaviour
 {
     public GameObject StartPopup;
+    public List<GameObject> Dialogues;
     public GameObject Dialogue1;
     public GameObject Dialogue2;
     public GameObject Dialogue3;
@@ -36,26 +38,8 @@ public class Blockpost : MonoBehaviour
         ///isPopupDialog = false;
         ///Time.timeScale = 1f;
         StartPopup.SetActive(false);
-    }
-    public void ResumeD1()
-    {
-        Dialogue1.SetActive(false);
-    }
-    public void ResumeD2()
-    {
-        Dialogue2.SetActive(false);
-    }
-    public void ResumeD3()
-    {
-        Dialogue3.SetActive(false);
-    }
-    public void ResumeD4()
-    {
-        Dialogue4.SetActive(false);
-    }
-    public void ResumeD5()
-    {
-        Dialogue5.SetActive(false);
+        Dialogues.FirstOrDefault(x => x.activeSelf)?.SetActive(false);
+
     }
     public void ResumeSummary()
     {
@@ -69,35 +53,10 @@ public class Blockpost : MonoBehaviour
         StartPopup.SetActive(isPopupDialog);
     }
 
-    public void PressNext1()
+    public void PressNext(int index)
     {
         Resume();
-        Dialogue1.SetActive(true);
-    }
-    public void PressNext2()
-    {
-        ResumeD1();
-        Dialogue2.SetActive(true);
-    }
-    public void PressNext3()
-    {
-        ResumeD2();
-        Dialogue3.SetActive(true);
-    }
-    public void PressNext4()
-    {
-        ResumeD3();
-        Dialogue4.SetActive(true);
-    }
-    public void PressNext5()
-    {
-        ResumeD4();
-        Dialogue5.SetActive(true);
-    }
-    public void PressNext6()
-    {
-        ResumeD5();
-        Summary.SetActive(true);
+        Dialogues[index].SetActive(true);
     }
     public void Cancel()
     {

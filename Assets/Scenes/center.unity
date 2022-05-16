@@ -27322,8 +27322,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230879337}
         m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: PressNext1
-        m_Mode: 1
+        m_MethodName: PressNext
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27918,12 +27918,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230879337}
         m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: PressNext6
-        m_Mode: 1
+        m_MethodName: PressNext
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -29037,6 +29037,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPopup: {fileID: 1174508775}
+  Dialogues:
+  - {fileID: 1242872893}
+  - {fileID: 1382383653}
+  - {fileID: 962420049}
+  - {fileID: 645306353}
+  - {fileID: 495738875}
   Dialogue1: {fileID: 1242872893}
   Dialogue2: {fileID: 1382383653}
   Dialogue3: {fileID: 962420049}
@@ -29468,12 +29474,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230879337}
         m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: PressNext3
-        m_Mode: 1
+        m_MethodName: PressNext
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -30365,12 +30371,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230879337}
         m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: PressNext5
-        m_Mode: 1
+        m_MethodName: PressNext
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -34517,12 +34523,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230879337}
         m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: PressNext4
-        m_Mode: 1
+        m_MethodName: PressNext
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -35231,12 +35237,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230879337}
         m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: PressNext2
-        m_Mode: 1
+        m_MethodName: PressNext
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

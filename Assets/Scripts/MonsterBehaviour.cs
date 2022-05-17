@@ -10,6 +10,7 @@ using UnityEngine.Serialization;
 
 public class MonsterBehaviour : MonoBehaviour
 {
+    private DirectionFinder _directionFinder;
     public static int BasicDamage = 20;
     public Transform Transform;
     private bool _coroutineStarted;
@@ -29,11 +30,13 @@ public class MonsterBehaviour : MonoBehaviour
 
     [SerializeField] public float PatrolingDistance;
     [SerializeField] public float PlayerVisibilityDistance;
+    [SerializeField] public int PlayerVisibilityAngle;
 
     [SerializeField] public double DistanceToPoint;
 
     public void Start()
     {
+        _directionFinder = GetComponent<DirectionFinder>();
         nmAgent = GetComponent<NavMeshAgent>();
         nmAgent.updateRotation = false;
         nmAgent.updateUpAxis = false;
@@ -53,13 +56,14 @@ public class MonsterBehaviour : MonoBehaviour
     {
         DistanceToPoint = (transform.position - PatrolPoints[PatrolingIndex].position).Length();
         //nmAgent.SetDestination();
-        if (HelpMethods.IsNear(transform, PatrolPoints[PatrolingIndex], PatrolingDistance)) //ToDo пофиксить индекс, выходит за массив
+        if (HelpMethods.IsNear(transform, PatrolPoints[PatrolingIndex],
+                PatrolingDistance)) //ToDo пофиксить индекс, выходит за массив
             if (PatrolingIndex + 1 < PatrolPoints.Count)
                 PatrolingIndex++;
             else
                 PatrolingIndex = 0; //= HelpMethods.GetRandomIndex(0, PatrolPoints.Count - 1);
         nmAgent.SetDestination(PatrolPoints[PatrolingIndex].position);
-        if (HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerVisibilityDistance))
+        if (IsPlayerVisible())
             nmAgent.SetDestination(BigData.Player.PlayerBehaviour.transform.position);
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
@@ -97,5 +101,12 @@ public class MonsterBehaviour : MonoBehaviour
             attackReadyness += 0.1;
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    public bool IsPlayerVisible()
+    {
+        return HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerVisibilityDistance) &&
+               _directionFinder.MovementVector.GetAngle(BigData.Player.PlayerBehaviour.transform.position -
+                                                        transform.position) < PlayerVisibilityAngle / 2;
     }
 }

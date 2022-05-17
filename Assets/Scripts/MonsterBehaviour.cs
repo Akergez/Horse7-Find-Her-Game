@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Classes;
 using DefaultNamespace;
 using UnityEngine;
@@ -12,13 +14,23 @@ public class MonsterBehaviour : MonoBehaviour
     public Transform Transform;
     private bool _coroutineStarted;
     public static Monster Monster;
-    [FormerlySerializedAs("MonsterBody")] [SerializeField] public GameObject monsterBody;
 
-    [FormerlySerializedAs("AttackRadius")] [SerializeField] public double attackRadius;
+    [FormerlySerializedAs("MonsterBody")] [SerializeField]
+    public GameObject monsterBody;
+
+    [FormerlySerializedAs("AttackRadius")] [SerializeField]
+    public double attackRadius;
 
     public double attackReadyness;
 
     public NavMeshAgent nmAgent;
+    [SerializeField] public List<Transform> PatrolPoints;
+    public int PatrolingIndex;
+
+    [SerializeField] public float PatrolingDistance;
+    [SerializeField] public float PlayerVisibilityDistance;
+
+    [SerializeField] public double DistanceToPoint;
 
     public void Start()
     {
@@ -39,7 +51,16 @@ public class MonsterBehaviour : MonoBehaviour
 
     public void Update()
     {
-        nmAgent.SetDestination(BigData.Player.PlayerBehaviour.transform.position);
+        DistanceToPoint = (transform.position - PatrolPoints[PatrolingIndex].position).Length();
+        //nmAgent.SetDestination();
+        if (HelpMethods.IsNear(transform, PatrolPoints[PatrolingIndex], PatrolingDistance)) //ToDo пофиксить индекс, выходит за массив
+            if (PatrolingIndex + 1 < PatrolPoints.Count)
+                PatrolingIndex++;
+            else
+                PatrolingIndex = 0; //= HelpMethods.GetRandomIndex(0, PatrolPoints.Count - 1);
+        nmAgent.SetDestination(PatrolPoints[PatrolingIndex].position);
+        if (HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerVisibilityDistance))
+            nmAgent.SetDestination(BigData.Player.PlayerBehaviour.transform.position);
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
         if (!BigData.MonstersMap[this].IsAlive)
@@ -51,11 +72,12 @@ public class MonsterBehaviour : MonoBehaviour
     }
 
     public void HandleDamage()
-    {/*
-        var position = Transform.position;
-        var vector = position - BigData.Player.PlayerBehaviour.transform.position;
-        position += vector.normalized * 0.3f;
-        Transform.position = position;*/
+    {
+        /*
+                var position = Transform.position;
+                var vector = position - BigData.Player.PlayerBehaviour.transform.position;
+                position += vector.normalized * 0.3f;
+                Transform.position = position;*/
     }
 
     private IEnumerator AttackCoroutine()

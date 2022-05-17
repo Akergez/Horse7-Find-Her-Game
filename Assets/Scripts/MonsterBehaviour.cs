@@ -34,6 +34,9 @@ public class MonsterBehaviour : MonoBehaviour
 
     [SerializeField] public double DistanceToPoint;
 
+    [SerializeField] public LayerMask playerMask;
+    [SerializeField] public LayerMask wallsMask;
+
     public void Start()
     {
         _directionFinder = GetComponent<DirectionFinder>();
@@ -52,7 +55,7 @@ public class MonsterBehaviour : MonoBehaviour
         Destroy(monsterBody);
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         DistanceToPoint = (transform.position - PatrolPoints[PatrolingIndex].position).Length();
         //nmAgent.SetDestination();
@@ -105,8 +108,21 @@ public class MonsterBehaviour : MonoBehaviour
 
     public bool IsPlayerVisible()
     {
-        return HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerVisibilityDistance) &&
-               _directionFinder.MovementVector.GetAngle(BigData.Player.PlayerBehaviour.transform.position -
-                                                        transform.position) < PlayerVisibilityAngle / 2;
+        var nearColliders = Physics2D.OverlapCircleAll(transform.position, PlayerVisibilityDistance, playerMask);
+        var Colliders = Physics2D.OverlapCircleAll(transform.position, PlayerVisibilityDistance, wallsMask);
+        var IsObstacleBetweenPlayerAndMonster = true;
+        if (nearColliders.Length != 0)
+        {
+            var distance = (nearColliders[0].transform.position - transform.position).Length();
+            var target = nearColliders[0].transform;
+            var position = transform.position;
+            var directionToTarget = (target.position - position).normalized;
+            IsObstacleBetweenPlayerAndMonster = Physics2D.Raycast(position, directionToTarget, (float)distance, wallsMask);
+        }
+        var playerPosition = BigData.Player.PlayerBehaviour.transform.position;
+        return HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerVisibilityDistance)
+               && _directionFinder.MovementVector.GetAngle(playerPosition - transform.position) <
+               PlayerVisibilityAngle / 2
+               && !IsObstacleBetweenPlayerAndMonster;
     }
 }

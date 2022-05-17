@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="Change Monster 1 1.prefab. Add basic Patroling Mechanism">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionFinder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionFinder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/Direction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/Direction.cs.meta" afterDir="false" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="Add MonsterVisibilityAngle, Add DirectionFinder.cs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collider.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,7 @@
       <workItem from="1652293090943" duration="1211000" />
       <workItem from="1652414351377" duration="72000" />
       <workItem from="1652552705191" duration="15176000" />
-      <workItem from="1652778254368" duration="6412000" />
+      <workItem from="1652778254368" duration="13509000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -268,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652781610149</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add MonsterVisibilityAngle, Add DirectionFinder.cs">
+      <created>1652802079749</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1652802079749</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,23 +316,24 @@
     <MESSAGE value="Refactoring, fix battle, fix colliders" />
     <MESSAGE value="CleanUp" />
     <MESSAGE value="Change Monster 1 1.prefab. Add basic Patroling Mechanism" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Monster 1 1.prefab. Add basic Patroling Mechanism" />
+    <MESSAGE value="Add MonsterVisibilityAngle, Add DirectionFinder.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add MonsterVisibilityAngle, Add DirectionFinder.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/DirectionFinder.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/DirectionFinder.cs" initialLine="22" containingFunctionPresentation="method 'UpdateDirectionCoroutine'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs</url>
+          <line>110</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" initialLine="110" containingFunctionPresentation="method 'IsPlayerVisible'">
             <startOffsets>
-              <option value="673" />
+              <option value="3429" />
             </startOffsets>
             <endOffsets>
-              <option value="724" />
+              <option value="3534" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

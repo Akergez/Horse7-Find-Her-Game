@@ -841,9 +841,15 @@ MonoBehaviour:
   - {fileID: 6102238157016117250}
   PatrolingIndex: 0
   PatrolingDistance: 1
-  PlayerVisibilityDistance: 1
-  PlayerVisibilityAngle: 90
+  PlayerVisibilityDistance: 5
+  PlayerVisibilityAngle: 120
   DistanceToPoint: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  wallsMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &3984489994134952768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -925,6 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814198f8fd6a4791b91f3e5ead042e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MovementVector: {x: 0, y: 0, z: 0}
   body: {fileID: 3984489994134952827}
   UseNull: 0
   UpdateFrequency: 1

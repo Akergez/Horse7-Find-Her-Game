@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterToRender: 1
-  monsterAttackBehaviour: {fileID: 0}
+  MonsterParameters: {fileID: 2005084505703700693}
 --- !u!1 &1946845224043593642
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterToRender: 2
-  monsterAttackBehaviour: {fileID: 0}
+  MonsterParameters: {fileID: 2005084505703700693}
 --- !u!1 &2922844724078596941
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,11 +785,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicDamage: 20
   Transform: {fileID: 0}
-  attackRadius: 0
-  PatrolingDistance: 0
-  PlayerInFOVVisibilityDistance: 0
-  PlayerVisibilityAngle: 0
-  PlayerBackVisibilityAngle: 0
+  attackRadius: 0.7
+  PatrolingDistance: 1
+  PlayerInFOVVisibilityDistance: 5
+  PlayerVisibilityAngle: 120
+  PlayerBackVisibilityAngle: 1
   monsterInitializer: {fileID: 3742249020783856868}
   _monsterAttackBehaviour: {fileID: 1300655482259113800}
   _monsterNavigationBehaviour: {fileID: 3835472333631726881}
@@ -971,14 +971,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonsterParameters: {fileID: 2005084505703700693}
   nmAgent: {fileID: 8716959312544742779}
-  PatrolPoints: []
+  PatrolPoints:
+  - {fileID: 4870284377580197652}
+  - {fileID: 6102238157016117250}
+  - {fileID: 8367288783372989764}
+  - {fileID: 4740383329381007804}
   PatrolingIndex: 0
   playerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   wallsMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &4161773461643955122
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ public class MonsterNavigationBehaviour : MonoBehaviour
     public NavMeshAgent nmAgent;
     [SerializeField] public List<Transform> PatrolPoints;
     public int PatrolingIndex;
-    
+
     public float PatrolingDistance => MonsterParameters.PatrolingDistance;
 
     public float PlayerInFOVVisibilityDistance => MonsterParameters.PlayerInFOVVisibilityDistance;

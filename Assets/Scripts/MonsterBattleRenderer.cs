@@ -6,14 +6,13 @@ namespace DefaultNamespace
 {
     public class MonsterBattleRenderer : MonoBehaviour
     {
-        [FormerlySerializedAs("SpriteRenderer")] [SerializeField]
-        public SpriteRenderer spriteRenderer;
-        [FormerlySerializedAs("MonsterBehaviour")] public MonsterBehaviour monsterBehaviour;
+        [SerializeField] public SpriteRenderer spriteRenderer;
+        public MonsterAttackBehaviour monsterAttackBehaviour;
 
         public void Update()
         {
             var color = spriteRenderer.color;
-            color.a = (float) (monsterBehaviour.attackReadyness / 5);
+            color.a = (float) (monsterAttackBehaviour.attackReadyness / 5);
             spriteRenderer.color = color;
         }
 

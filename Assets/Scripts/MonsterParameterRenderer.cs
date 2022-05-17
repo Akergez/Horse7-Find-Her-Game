@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class MonsterParameterRenderer : MonoBehaviour
 {
     private Image _progressBar;
-    [FormerlySerializedAs("ParameterToRender")] [SerializeField] public EntityParameter parameterToRender;
+    [SerializeField] public EntityParameter parameterToRender;
 
-    [FormerlySerializedAs("_monsterBehaviour")] [SerializeField] private MonsterBehaviour monsterBehaviour;
+    [SerializeField] private MonsterAttackBehaviour monsterAttackBehaviour;
     
     private void Start()
     {
@@ -22,10 +22,10 @@ public class MonsterParameterRenderer : MonoBehaviour
         switch (parameterToRender)
         {
             case EntityParameter.Hp:
-                _progressBar.fillAmount = (float)(BigData.MonstersMap[monsterBehaviour].HealtPoints/5 * 0.05);
+                _progressBar.fillAmount = (float)(BigData.MonstersMap[monsterAttackBehaviour.MonsterParameters].HealtPoints/5 * 0.05);
                 break;
             case EntityParameter.BattleReadyness:
-                _progressBar.fillAmount = (float)monsterBehaviour.attackReadyness/5;
+                _progressBar.fillAmount = (float)monsterAttackBehaviour.attackReadyness/5;
                 break;
             case EntityParameter.Hunger:
                 break;

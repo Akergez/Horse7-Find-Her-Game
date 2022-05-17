@@ -2,11 +2,11 @@ namespace Classes
 {
     public class Monster : Entity
     {
-        public MonsterBehaviour MonsterBehaviour;
+        public MonsterParameters MonsterInitializer;
 
-        public Monster(MonsterBehaviour monsterBehaviour)
+        public Monster(MonsterParameters monsterInitializer)
         {
-            MonsterBehaviour = monsterBehaviour;
+            MonsterInitializer = monsterInitializer;
         }
 
         public override void GetDamage(double damage)
@@ -16,7 +16,7 @@ namespace Classes
             else
                 HealtPoints = 0;
             UpdateState();
-            MonsterBehaviour.HandleDamage();
+            MonsterInitializer._monsterAttackBehaviour.HandleDamage();
         }
 
     }

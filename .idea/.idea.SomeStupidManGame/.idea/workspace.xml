@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="Add MonsterVisibilityAngle, Add DirectionFinder.cs">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Collider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Collider.prefab" afterDir="false" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="Add RayCast for Monsters">
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PopupTable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/Monster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Prefabs/Collider.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HelpMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/cb/4b7deb4f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/55/011288a4/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -124,7 +122,7 @@
       <workItem from="1652293090943" duration="1211000" />
       <workItem from="1652414351377" duration="72000" />
       <workItem from="1652552705191" duration="15176000" />
-      <workItem from="1652778254368" duration="13509000" />
+      <workItem from="1652778254368" duration="14230000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -273,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652802079749</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add RayCast for Monsters">
+      <created>1652809581411</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1652809581411</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,20 +322,21 @@
     <MESSAGE value="CleanUp" />
     <MESSAGE value="Change Monster 1 1.prefab. Add basic Patroling Mechanism" />
     <MESSAGE value="Add MonsterVisibilityAngle, Add DirectionFinder.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add MonsterVisibilityAngle, Add DirectionFinder.cs" />
+    <MESSAGE value="Add RayCast for Monsters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add RayCast for Monsters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs</url>
-          <line>110</line>
+          <line>107</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour.cs" initialLine="110" containingFunctionPresentation="method 'IsPlayerVisible'">
             <startOffsets>
-              <option value="3429" />
+              <option value="3278" />
             </startOffsets>
             <endOffsets>
-              <option value="3534" />
+              <option value="3383" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

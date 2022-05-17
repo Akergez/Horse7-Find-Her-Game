@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Classes;
 using DefaultNamespace;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
@@ -29,8 +30,9 @@ public class MonsterBehaviour : MonoBehaviour
     public int PatrolingIndex;
 
     [SerializeField] public float PatrolingDistance;
-    [SerializeField] public float PlayerVisibilityDistance;
+    [FormerlySerializedAs("PlayerVisibilityDistance")] [SerializeField] public float PlayerInFOVVisibilityDistance;
     [SerializeField] public int PlayerVisibilityAngle;
+    [SerializeField] public float PlayerBackVisibilityAngle;
 
     [SerializeField] public double DistanceToPoint;
 
@@ -80,11 +82,7 @@ public class MonsterBehaviour : MonoBehaviour
 
     public void HandleDamage()
     {
-        /*
-                var position = Transform.position;
-                var vector = position - BigData.Player.PlayerBehaviour.transform.position;
-                position += vector.normalized * 0.3f;
-                Transform.position = position;*/
+        _directionFinder.MovementVector = -_directionFinder.MovementVector;
     }
 
     private IEnumerator AttackCoroutine()
@@ -108,8 +106,8 @@ public class MonsterBehaviour : MonoBehaviour
 
     public bool IsPlayerVisible()
     {
-        var nearColliders = Physics2D.OverlapCircleAll(transform.position, PlayerVisibilityDistance, playerMask);
-        var Colliders = Physics2D.OverlapCircleAll(transform.position, PlayerVisibilityDistance, wallsMask);
+        var nearColliders = Physics2D.OverlapCircleAll(transform.position, PlayerInFOVVisibilityDistance, playerMask);
+        var Colliders = Physics2D.OverlapCircleAll(transform.position, PlayerInFOVVisibilityDistance, wallsMask);
         var IsObstacleBetweenPlayerAndMonster = true;
         if (nearColliders.Length != 0)
         {
@@ -120,9 +118,10 @@ public class MonsterBehaviour : MonoBehaviour
             IsObstacleBetweenPlayerAndMonster = Physics2D.Raycast(position, directionToTarget, (float)distance, wallsMask);
         }
         var playerPosition = BigData.Player.PlayerBehaviour.transform.position;
-        return HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerVisibilityDistance)
+        return HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerInFOVVisibilityDistance)
                && _directionFinder.MovementVector.GetAngle(playerPosition - transform.position) <
                PlayerVisibilityAngle / 2
-               && !IsObstacleBetweenPlayerAndMonster;
+               && !IsObstacleBetweenPlayerAndMonster 
+               || HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerBackVisibilityAngle);
     }
 }

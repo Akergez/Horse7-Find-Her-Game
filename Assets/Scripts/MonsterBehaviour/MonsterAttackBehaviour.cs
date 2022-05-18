@@ -33,7 +33,7 @@ public class MonsterAttackBehaviour : MonoBehaviour
 
     public void HandleDamage()
     {
-        _directionFinder.MovementVector = -_directionFinder.MovementVector;
+        //_directionFinder.MovementVector = -_directionFinder.MovementVector;
     }
 
     private IEnumerator AttackCoroutine()
@@ -42,7 +42,7 @@ public class MonsterAttackBehaviour : MonoBehaviour
         {
             if (Math.Abs(attackReadyness - 5) < 1e-9)
             {
-                if (HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, attackRadius))
+                if (HelpMethods.IsNear(BigData.Player.PlayerBody, transform, attackRadius))
                 {
                     BigData.Player.GetDamage(BasicDamage);
                 }

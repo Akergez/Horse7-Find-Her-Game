@@ -19,13 +19,13 @@ public class PlayerParameterRenderer : MonoBehaviour
         switch (toDisplay)
         {
             case EntityParameter.Hunger:
-                _progressBar.fillAmount = (float) (BigData.Player.Hunger / 5 * 0.05);
+                _progressBar.fillAmount = (float) (BigData.Player.PlayerLiveBehaviour.Hunger / 5 * 0.05);
                 break;
             case EntityParameter.Hp:
-                _progressBar.fillAmount = (float) (BigData.Player.HealtPoints / 5 * 0.05);
+                _progressBar.fillAmount = (float) (BigData.Player.PlayerLiveBehaviour.HealtPoints / 5 * 0.05);
                 break;
             case EntityParameter.BattleReadyness:
-                _progressBar.fillAmount = (float) (BigData.Player.PlayerBehaviour.Increment * 0.25);
+                _progressBar.fillAmount = (float) (BigData.Player.PlayerAttackBehaviour.Increment * 0.25);
                 break;
         }
     }

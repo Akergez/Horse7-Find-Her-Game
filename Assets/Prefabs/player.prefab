@@ -525,8 +525,11 @@ GameObject:
   - component: {fileID: 4670420331937441758}
   - component: {fileID: 4670420331937441759}
   - component: {fileID: 4670420331937441756}
-  - component: {fileID: 4670420331937441757}
   - component: {fileID: 4670420331937441730}
+  - component: {fileID: 5966037972631854792}
+  - component: {fileID: 4256123250873196906}
+  - component: {fileID: 8249557391360363347}
+  - component: {fileID: 7079545192262237775}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -647,24 +650,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4670420331937441757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4670420331937441728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4160cf3d7bd06cbba836291137539029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 4670420331937441756}
-  Increment: 4
-  moveSpeed: 1
-  animator: {fileID: 4670420331937441730}
-  movement: {x: 0, y: 0}
-  AttackRadius: 1
 --- !u!95 &4670420331937441730
 Animator:
   serializedVersion: 3
@@ -684,6 +669,74 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5966037972631854792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670420331937441728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169ab60888444619a5976ec532290892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerContainer: {fileID: 4670420331937441728}
+  moveSpeed: 1
+  animator: {fileID: 0}
+  AttackRadius: 10
+  InitialHp: 100
+  InitialHunger: 100
+  PlayerBody: {fileID: 0}
+  PlayerMovementBehaviour: {fileID: 0}
+  PlayerLiveBehaviour: {fileID: 0}
+  PlayerAttackBehaviour: {fileID: 0}
+--- !u!114 &4256123250873196906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670420331937441728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49ebc8d3878426d928813fe1ec219dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  rb: {fileID: 0}
+  movement: {x: 0, y: 0}
+--- !u!114 &8249557391360363347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670420331937441728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a00819412b1447db5d433125d20428d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  HungerRecalculateFrequency: 0
+  Hunger: 0
+  HealtPoints: 0
+  IsAlive: 1
+--- !u!114 &7079545192262237775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670420331937441728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cdb9796a644064b22c409b982b61b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  Increment: 4
 --- !u!1 &6231824777185380155
 GameObject:
   m_ObjectHideFlags: 0

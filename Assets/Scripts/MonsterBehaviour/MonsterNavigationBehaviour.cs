@@ -26,6 +26,8 @@ public class MonsterNavigationBehaviour : MonoBehaviour
     public int PlayerVisibilityAngle => MonsterParameters.PlayerVisibilityAngle;
     public float PlayerBackVisibilityAngle => MonsterParameters.PlayerBackVisibilityAngle;
 
+    public Transform PlayerBody => BigData.Player.PlayerBody;
+
     [SerializeField] public LayerMask playerMask;
     [SerializeField] public LayerMask wallsMask;
 
@@ -53,7 +55,7 @@ public class MonsterNavigationBehaviour : MonoBehaviour
                 PatrolingIndex = 0;
         nmAgent.SetDestination(PatrolPoints[PatrolingIndex].position);
         if (IsPlayerVisible())
-            nmAgent.SetDestination(BigData.Player.PlayerBehaviour.transform.position);
+            nmAgent.SetDestination(PlayerBody.position);
     }
 
     public bool IsPlayerVisible()
@@ -70,11 +72,13 @@ public class MonsterNavigationBehaviour : MonoBehaviour
                 Physics2D.Raycast(position, directionToTarget, (float) distance, wallsMask);
         }
 
-        var playerPosition = BigData.Player.PlayerBehaviour.transform.position;
-        return HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerInFOVVisibilityDistance)
-               && _directionFinder.MovementVector.GetAngle(playerPosition - transform.position) <
-               PlayerVisibilityAngle / 2
+        var playerPosition = PlayerBody.transform.position;
+        var IsPlayerNear = HelpMethods.IsNear(PlayerBody.transform, transform, PlayerInFOVVisibilityDistance);
+        var IsPlayerInFOV = _directionFinder.MovementVector.GetAngle(playerPosition - transform.position) <
+                            PlayerVisibilityAngle / 2;
+        return IsPlayerNear
+               && IsPlayerInFOV
                && !IsObstacleBetweenPlayerAndMonster
-               || HelpMethods.IsNear(BigData.Player.PlayerBehaviour.transform, transform, PlayerBackVisibilityAngle);
+               || HelpMethods.IsNear(PlayerBody, transform, PlayerBackVisibilityAngle);
     }
 }

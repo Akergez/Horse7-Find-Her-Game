@@ -3,25 +3,16 @@ using System.Collections;
 using DefaultNamespace;
 using UnityEngine;
 
-public class MonsterAttackBehaviour : MonoBehaviour
+public class MonsterAttackBehaviour : EnemyAttackBehaviour
 {
-    public MonsterParameters monsterParameters;
-    
     private int BasicDamage => monsterParameters.basicDamage;
-    private double AttackRadius => monsterParameters.attackRadius;
     private float _attackCD => monsterParameters.AttackCD;
 
     private bool _coroutineStarted;
     public double attackReadyness;
 
-    public void Start()
-    {
-        monsterParameters = GetComponent<MonsterParameters>();
-    }
-
     public void FixedUpdate()
     {
-        var a = 0;
         if (!(monsterParameters.playerBody == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
         _coroutineStarted = true;

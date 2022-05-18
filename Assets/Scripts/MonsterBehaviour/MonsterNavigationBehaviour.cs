@@ -19,6 +19,7 @@ public class MonsterNavigationBehaviour : MonoBehaviour
     [SerializeField] public int patrolingIndex;
     [SerializeField] public LayerMask playerMask;
     [SerializeField] public LayerMask wallsMask;
+    [SerializeField] public double distanceToTarget;
 
     public void Start()
     {
@@ -36,15 +37,24 @@ public class MonsterNavigationBehaviour : MonoBehaviour
 
     public void FixedUpdate()
     {
+        nmAgent.speed = monsterParameters.navigationSpeed;
+        var target = patrolPoints[patrolingIndex].position;
         if (HelpMethods.IsNear(transform, patrolPoints[patrolingIndex],
                 PatrolingDistance))
             if (patrolingIndex + 1 < patrolPoints.Count)
                 patrolingIndex++;
             else
                 patrolingIndex = 0;
+        target = patrolPoints[patrolingIndex].position;
         nmAgent.SetDestination(patrolPoints[patrolingIndex].position);
         if (IsPlayerVisible())
+        {
             nmAgent.SetDestination(PlayerBody.position);
+            nmAgent.speed = monsterParameters.followingSpeed;
+            target = PlayerBody.position;
+        }
+
+        distanceToTarget = (monsterParameters.transform.position - target).Length();
     }
 
     private bool IsPlayerVisible()

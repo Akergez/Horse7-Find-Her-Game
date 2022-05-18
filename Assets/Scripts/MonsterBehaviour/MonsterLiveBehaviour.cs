@@ -9,6 +9,7 @@ public class MonsterLiveBehaviour : MonoBehaviour
     
     public void Start()
     {
+        monsterParameters = GetComponent<MonsterParameters>();
         healthPoints = monsterParameters.initialHealthPoints;
         monsterParameters = GetComponent<MonsterParameters>();
     }

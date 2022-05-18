@@ -10,12 +10,14 @@ public class MonsterParameters : MonoBehaviour
     [SerializeField] public float playerInFOVVisibilityDistance;
     [SerializeField] public int playerVisibilityAngle;
     [SerializeField] public float playerBackVisibilityAngle;
+    [SerializeField] public float navigationSpeed;
+    [SerializeField] public float followingSpeed;
     
     [SerializeField] public GameObject monsterContainer;
     [SerializeField] public PlayerParameters playerBody;
 
     private MonsterInitializer _monsterInitializer;
-    public MonsterAttackBehaviour monsterAttackBehaviour;
+    public EnemyAttackBehaviour monsterAttackBehaviour;
     private MonsterNavigationBehaviour _monsterNavigationBehaviour;
     public MonsterLiveBehaviour monsterLiveBehaviour;
     
@@ -26,7 +28,7 @@ public class MonsterParameters : MonoBehaviour
         monsterLiveBehaviour = GetComponent<MonsterLiveBehaviour>();
         monsterBody = GetComponent<Transform>();
         _monsterInitializer = GetComponent<MonsterInitializer>();
-        monsterAttackBehaviour = GetComponent<MonsterAttackBehaviour>();
+        monsterAttackBehaviour = GetComponent<EnemyAttackBehaviour>();
         _monsterNavigationBehaviour = GetComponent<MonsterNavigationBehaviour>();
         monsterLiveBehaviour = GetComponent<MonsterLiveBehaviour>();
     }

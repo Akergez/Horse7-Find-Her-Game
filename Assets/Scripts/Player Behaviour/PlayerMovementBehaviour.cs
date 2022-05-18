@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
@@ -32,8 +33,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         var speedMultiplier = movement.x != 0 && movement.y != 0 ? 0.75f : 1f;
+        var speed = speedMultiplier;
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed *= Parameters.runningSpeed;
+        else
+            speed *= Parameters.baseSpeed;
+    
         if (!IsPlayerFreezed)
-            rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * speedMultiplier));
+            rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * speed));
     }
 
 

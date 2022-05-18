@@ -9,7 +9,9 @@ public class MonsterParameterRenderer : MonoBehaviour
     private Image _progressBar;
     [SerializeField] public EntityParameter parameterToRender;
     [SerializeField] public MonsterParameters monsterParameters;
-    private MonsterAttackBehaviour MonsterAttackBehaviour => monsterParameters.monsterAttackBehaviour;
+
+    private MonsterAttackBehaviour MonsterAttackBehaviour =>
+        (MonsterAttackBehaviour) monsterParameters.monsterAttackBehaviour;
 
     private void Start()
     {

@@ -8,6 +8,8 @@ public class PlayerParameters : MonoBehaviour
     [SerializeField] public float attackRadius;
     [SerializeField] public double initialHp;
     [SerializeField] public double initialHunger;
+    [SerializeField] public float baseSpeed;
+    [SerializeField] public float runningSpeed;
 
     public Animator animator;
     public Transform playerBody;

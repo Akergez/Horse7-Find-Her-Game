@@ -792,6 +792,8 @@ MonoBehaviour:
   playerInFOVVisibilityDistance: 4
   playerVisibilityAngle: 120
   playerBackVisibilityAngle: 1
+  navigationSpeed: 1
+  followingSpeed: 1.5
   monsterContainer: {fileID: 3984489994134952769}
   playerBody: {fileID: 0}
   monsterAttackBehaviour: {fileID: 0}
@@ -986,6 +988,7 @@ MonoBehaviour:
   wallsMask:
     serializedVersion: 2
     m_Bits: 128
+  distanceToTarget: 0
 --- !u!114 &6696631423530521222
 MonoBehaviour:
   m_ObjectHideFlags: 0

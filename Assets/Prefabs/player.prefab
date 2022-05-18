@@ -684,10 +684,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerContainer: {fileID: 4670420331937441728}
-  moveSpeed: 1
+  moveSpeed: 2
   attackRadius: 100
   initialHp: 100
   initialHunger: 100
+  baseSpeed: 1
+  runningSpeed: 1.5
   animator: {fileID: 0}
   playerBody: {fileID: 0}
   playerMovementBehaviour: {fileID: 0}

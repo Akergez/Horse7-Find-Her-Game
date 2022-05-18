@@ -6,6 +6,7 @@ public class PlayerParameterRenderer : MonoBehaviour
 {
     private Image _progressBar;
     [SerializeField] private EntityParameter toDisplay;
+    [SerializeField] private PlayerParameters PlayerParameters;
     void Start()
     {
         _progressBar = GetComponent<Image>();
@@ -16,13 +17,13 @@ public class PlayerParameterRenderer : MonoBehaviour
         switch (toDisplay)
         {
             case EntityParameter.Hunger:
-                _progressBar.fillAmount = (float) (BigData.Player.playerLiveBehaviour.Hunger / 5 * 0.05);
+                _progressBar.fillAmount = (float) (PlayerParameters.playerLiveBehaviour.Hunger / 5 * 0.05);
                 break;
             case EntityParameter.Hp:
-                _progressBar.fillAmount = (float) (BigData.Player.playerLiveBehaviour.HealtPoints / 5 * 0.05);
+                _progressBar.fillAmount = (float) (PlayerParameters.playerLiveBehaviour.HealtPoints / 5 * 0.05);
                 break;
             case EntityParameter.BattleReadyness:
-                _progressBar.fillAmount = (float) (BigData.Player.playerAttackBehaviour.Increment * 0.25);
+                _progressBar.fillAmount = (float) (PlayerParameters.playerAttackBehaviour.Increment * 0.25);
                 break;
         }
     }

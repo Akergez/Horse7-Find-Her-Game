@@ -9,6 +9,7 @@ public class MonsterAttackBehaviour : MonoBehaviour
     
     private int BasicDamage => monsterParameters.basicDamage;
     private double AttackRadius => monsterParameters.attackRadius;
+    private float _attackCD => monsterParameters.AttackCD;
 
     private bool _coroutineStarted;
     public double attackReadyness;
@@ -21,7 +22,7 @@ public class MonsterAttackBehaviour : MonoBehaviour
     public void FixedUpdate()
     {
         var a = 0;
-        if (!(BigData.Player == null || _coroutineStarted))
+        if (!(monsterParameters.playerBody == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
         _coroutineStarted = true;
     }
@@ -32,16 +33,16 @@ public class MonsterAttackBehaviour : MonoBehaviour
         {
             if (Math.Abs(attackReadyness - 5) < 1e-9)
             {
-                if (HelpMethods.IsNear(BigData.Player.playerBody, transform, AttackRadius))
+                if (HelpMethods.IsNear(monsterParameters.playerBody.playerBody, transform, AttackRadius))
                 {
-                    BigData.Player.GetDamage(BasicDamage);
+                    monsterParameters.playerBody.GetDamage(BasicDamage);
                 }
 
                 attackReadyness = 0;
             }
 
             attackReadyness += 0.1;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(_attackCD/50);
         }
     }
 }

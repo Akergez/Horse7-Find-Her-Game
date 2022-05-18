@@ -4,6 +4,7 @@ public class MonsterParameters : MonoBehaviour
 {
     [SerializeField] public double initialHealthPoints;
     [SerializeField] public int basicDamage;
+    [SerializeField] public float AttackCD;
     [SerializeField] public double attackRadius;
     [SerializeField] public float patrolingDistance;
     [SerializeField] public float playerInFOVVisibilityDistance;
@@ -11,6 +12,7 @@ public class MonsterParameters : MonoBehaviour
     [SerializeField] public float playerBackVisibilityAngle;
     
     [SerializeField] public GameObject monsterContainer;
+    [SerializeField] public PlayerParameters playerBody;
 
     private MonsterInitializer _monsterInitializer;
     public MonsterAttackBehaviour monsterAttackBehaviour;

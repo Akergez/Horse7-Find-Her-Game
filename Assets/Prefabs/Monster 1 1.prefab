@@ -786,12 +786,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialHealthPoints: 100
   basicDamage: 20
+  AttackCD: 3
   attackRadius: 0.7
-  patrolingDistance: 0.4
+  patrolingDistance: 1
   playerInFOVVisibilityDistance: 4
   playerVisibilityAngle: 120
   playerBackVisibilityAngle: 1
   monsterContainer: {fileID: 3984489994134952769}
+  playerBody: {fileID: 0}
   monsterAttackBehaviour: {fileID: 0}
   monsterLiveBehaviour: {fileID: 0}
   monsterBody: {fileID: 0}

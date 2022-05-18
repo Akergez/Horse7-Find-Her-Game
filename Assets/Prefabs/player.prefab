@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toDisplay: 0
+  PlayerParameters: {fileID: 5966037972631854792}
 --- !u!1 &1316177424580505680
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toDisplay: 1
+  PlayerParameters: {fileID: 5966037972631854792}
 --- !u!114 &6744776221161983236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toDisplay: 2
+  PlayerParameters: {fileID: 5966037972631854792}
 --- !u!1 &6231824779089771694
 GameObject:
   m_ObjectHideFlags: 0

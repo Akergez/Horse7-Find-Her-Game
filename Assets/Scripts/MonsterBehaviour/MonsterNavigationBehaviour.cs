@@ -13,7 +13,7 @@ public class MonsterNavigationBehaviour : MonoBehaviour
     private float PlayerInFOVVisibilityDistance => monsterParameters.playerInFOVVisibilityDistance;
     private int PlayerVisibilityAngle => monsterParameters.playerVisibilityAngle;
     private float PlayerBackVisibilityAngle => monsterParameters.playerBackVisibilityAngle;
-    private Transform PlayerBody => BigData.Player.playerBody;
+    private Transform PlayerBody => monsterParameters.playerBody.playerBody;
 
     [SerializeField] public List<Transform> patrolPoints;
     [SerializeField] public int patrolingIndex;

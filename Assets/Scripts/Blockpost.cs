@@ -9,12 +9,14 @@ public class Blockpost : MonoBehaviour
     public GameObject Object;
     private int _visitCount;
 
+    [SerializeField] public PlayerParameters Player;
+
     private void OnCollisionEnter2D(Collision2D newCollision)
     {
         if (newCollision.gameObject.CompareTag("Player") && _visitCount == 0)
         {
             Debug.Log("Popup Dialog");
-            if (BigData.Player.playerMovementBehaviour.IsPlayerFreezed) Resume();
+            if (Player.playerMovementBehaviour.IsPlayerFreezed) Resume();
             else
             {
                 _visitCount += 1;
@@ -31,14 +33,14 @@ public class Blockpost : MonoBehaviour
 
     private void ResumeSummary()
     {
-        BigData.Player.playerMovementBehaviour.SetPlayerFreezed(false);
+        Player.playerMovementBehaviour.SetPlayerFreezed(false);
         Dialogues.Last().SetActive(false);
     }
 
     private void ShowPopupStart()
     {
-        BigData.Player.playerMovementBehaviour.SetPlayerFreezed(true);
-        StartPopup.SetActive(BigData.Player.playerMovementBehaviour.IsPlayerFreezed);
+        Player.playerMovementBehaviour.SetPlayerFreezed(true);
+        StartPopup.SetActive(Player.playerMovementBehaviour.IsPlayerFreezed);
     }
 
     public void PressNext(int index)

@@ -30,13 +30,10 @@ public class PlayerParameters : MonoBehaviour
     public void Start()
     {
         InitializeComponents();
-        if (BigData.Player == null)
-            BigData.Player = this;
     }
 
     private void HandleDeath()
     {
-        BigData.ReloadData();
         SceneManager.LoadScene("MazeDeadScreen");
     }
 

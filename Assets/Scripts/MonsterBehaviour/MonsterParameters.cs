@@ -1,28 +1,31 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 public class MonsterParameters : MonoBehaviour
 {
+    [SerializeField] public double initialHealthPoints;
     [SerializeField] public int basicDamage;
-    public Transform Transform;
     [SerializeField] public double attackRadius;
-    [SerializeField] public float PatrolingDistance;
-    [SerializeField] public float PlayerInFOVVisibilityDistance;
-    [SerializeField] public int PlayerVisibilityAngle;
-    [SerializeField] public float PlayerBackVisibilityAngle;
+    [SerializeField] public float patrolingDistance;
+    [SerializeField] public float playerInFOVVisibilityDistance;
+    [SerializeField] public int playerVisibilityAngle;
+    [SerializeField] public float playerBackVisibilityAngle;
+    
+    [SerializeField] public GameObject monsterContainer;
 
-    [FormerlySerializedAs("_monsterBehaviour")] [SerializeField] private MonsterInitializer monsterInitializer;
-    [SerializeField] public MonsterAttackBehaviour _monsterAttackBehaviour;
-    [SerializeField] private MonsterNavigationBehaviour _monsterNavigationBehaviour;
+    private MonsterInitializer _monsterInitializer;
+    public MonsterAttackBehaviour monsterAttackBehaviour;
+    private MonsterNavigationBehaviour _monsterNavigationBehaviour;
+    public MonsterLiveBehaviour monsterLiveBehaviour;
+    
+    public Transform monsterBody;
 
     public void Start()
     {
-        Transform = GetComponent<Transform>();
-        monsterInitializer = GetComponent<MonsterInitializer>();
-        _monsterAttackBehaviour = GetComponent<MonsterAttackBehaviour>();
+        monsterLiveBehaviour = GetComponent<MonsterLiveBehaviour>();
+        monsterBody = GetComponent<Transform>();
+        _monsterInitializer = GetComponent<MonsterInitializer>();
+        monsterAttackBehaviour = GetComponent<MonsterAttackBehaviour>();
         _monsterNavigationBehaviour = GetComponent<MonsterNavigationBehaviour>();
+        monsterLiveBehaviour = GetComponent<MonsterLiveBehaviour>();
     }
 }

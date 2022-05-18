@@ -1,39 +1,29 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Classes;
 using DefaultNamespace;
-using TMPro.EditorUtilities;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 public class MonsterAttackBehaviour : MonoBehaviour
 {
-    public MonsterParameters MonsterParameters;
-    private DirectionFinder _directionFinder;
-    public int BasicDamage => MonsterParameters.basicDamage;
-    private bool _coroutineStarted;
+    public MonsterParameters monsterParameters;
+    
+    private int BasicDamage => monsterParameters.basicDamage;
+    private double AttackRadius => monsterParameters.attackRadius;
 
-    public double attackRadius => MonsterParameters.attackRadius;
+    private bool _coroutineStarted;
     public double attackReadyness;
 
     public void Start()
     {
-        MonsterParameters = GetComponent<MonsterParameters>();
+        monsterParameters = GetComponent<MonsterParameters>();
     }
 
     public void FixedUpdate()
     {
+        var a = 0;
         if (!(BigData.Player == null || _coroutineStarted))
             StartCoroutine(AttackCoroutine());
         _coroutineStarted = true;
-    }
-
-    public void HandleDamage()
-    {
-        //_directionFinder.MovementVector = -_directionFinder.MovementVector;
     }
 
     private IEnumerator AttackCoroutine()
@@ -42,7 +32,7 @@ public class MonsterAttackBehaviour : MonoBehaviour
         {
             if (Math.Abs(attackReadyness - 5) < 1e-9)
             {
-                if (HelpMethods.IsNear(BigData.Player.PlayerBody, transform, attackRadius))
+                if (HelpMethods.IsNear(BigData.Player.playerBody, transform, AttackRadius))
                 {
                     BigData.Player.GetDamage(BasicDamage);
                 }

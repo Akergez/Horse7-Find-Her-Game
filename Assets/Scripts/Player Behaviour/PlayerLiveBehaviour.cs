@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerLiveBehaviour : MonoBehaviour
 {
-    [SerializeField] private PlayerParameters Parameters;
+    private PlayerParameters Parameters;
 
     [SerializeField] public float HungerRecalculateFrequency;
     [SerializeField] public double Hunger;
@@ -13,8 +13,8 @@ public class PlayerLiveBehaviour : MonoBehaviour
     public void Start()
     {
         Parameters = GetComponent<PlayerParameters>();
-        Hunger = Parameters.InitialHunger;
-        HealtPoints = Parameters.InitialHp;
+        Hunger = Parameters.initialHunger;
+        HealtPoints = Parameters.initialHp;
         StartCoroutine(HungerRecalculateCoroutine());
     }
 

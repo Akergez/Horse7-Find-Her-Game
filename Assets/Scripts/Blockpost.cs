@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,7 +14,7 @@ public class Blockpost : MonoBehaviour
         if (newCollision.gameObject.CompareTag("Player") && _visitCount == 0)
         {
             Debug.Log("Popup Dialog");
-            if (BigData.Player.PlayerMovementBehaviour.IsPlayerFreezed) Resume();
+            if (BigData.Player.playerMovementBehaviour.IsPlayerFreezed) Resume();
             else
             {
                 _visitCount += 1;
@@ -32,14 +31,14 @@ public class Blockpost : MonoBehaviour
 
     private void ResumeSummary()
     {
-        BigData.Player.PlayerMovementBehaviour.SetPlayerFreezed(false);
+        BigData.Player.playerMovementBehaviour.SetPlayerFreezed(false);
         Dialogues.Last().SetActive(false);
     }
 
     private void ShowPopupStart()
     {
-        BigData.Player.PlayerMovementBehaviour.SetPlayerFreezed(true);
-        StartPopup.SetActive(BigData.Player.PlayerMovementBehaviour.IsPlayerFreezed);
+        BigData.Player.playerMovementBehaviour.SetPlayerFreezed(true);
+        StartPopup.SetActive(BigData.Player.playerMovementBehaviour.IsPlayerFreezed);
     }
 
     public void PressNext(int index)

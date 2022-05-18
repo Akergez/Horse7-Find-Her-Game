@@ -683,14 +683,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerContainer: {fileID: 4670420331937441728}
   moveSpeed: 1
+  attackRadius: 100
+  initialHp: 100
+  initialHunger: 100
   animator: {fileID: 0}
-  AttackRadius: 10
-  InitialHp: 100
-  InitialHunger: 100
-  PlayerBody: {fileID: 0}
-  PlayerMovementBehaviour: {fileID: 0}
-  PlayerLiveBehaviour: {fileID: 0}
-  PlayerAttackBehaviour: {fileID: 0}
+  playerBody: {fileID: 0}
+  playerMovementBehaviour: {fileID: 0}
+  playerLiveBehaviour: {fileID: 0}
+  playerAttackBehaviour: {fileID: 0}
 --- !u!114 &4256123250873196906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,8 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a00819412b1447db5d433125d20428d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
-  HungerRecalculateFrequency: 0
+  HungerRecalculateFrequency: 1
   Hunger: 0
   HealtPoints: 0
   IsAlive: 1
@@ -735,8 +734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cdb9796a644064b22c409b982b61b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
   Increment: 4
+  monsterMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &6231824777185380155
 GameObject:
   m_ObjectHideFlags: 0

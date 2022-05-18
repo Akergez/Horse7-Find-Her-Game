@@ -1,40 +1,32 @@
-using System.Collections;
-using System.Linq;
-using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerParameters : MonoBehaviour
 {
     [SerializeField] public GameObject playerContainer;
-
     [SerializeField] public float moveSpeed;
+    [SerializeField] public float attackRadius;
+    [SerializeField] public double initialHp;
+    [SerializeField] public double initialHunger;
 
-    [SerializeField] public Animator animator;
+    public Animator animator;
+    public Transform playerBody;
 
-    [SerializeField] public float AttackRadius;
+    public PlayerMovementBehaviour playerMovementBehaviour;
+    public PlayerLiveBehaviour playerLiveBehaviour;
+    public PlayerAttackBehaviour playerAttackBehaviour;
 
-    [SerializeField] public double InitialHp;
-    
-    [SerializeField] public double InitialHunger;
+    public Vector3 MovementVector => playerMovementBehaviour.movement;
 
-    [SerializeField] public Transform PlayerBody;
-
-    [SerializeField] public PlayerMovementBehaviour PlayerMovementBehaviour;
-
-    [SerializeField] public PlayerLiveBehaviour PlayerLiveBehaviour;
-    [SerializeField] public PlayerAttackBehaviour PlayerAttackBehaviour;
-
-    [SerializeField] public Vector3 MovementVector => PlayerMovementBehaviour.movement;
-
-    public void InitializeComponents()
+    private void InitializeComponents()
     {
         animator = GetComponent<Animator>();
-        PlayerMovementBehaviour = GetComponent<PlayerMovementBehaviour>();
-        PlayerLiveBehaviour = GetComponent<PlayerLiveBehaviour>();
-        PlayerAttackBehaviour = GetComponent<PlayerAttackBehaviour>();
-        PlayerBody = GetComponent<Transform>();
+        playerMovementBehaviour = GetComponent<PlayerMovementBehaviour>();
+        playerLiveBehaviour = GetComponent<PlayerLiveBehaviour>();
+        playerAttackBehaviour = GetComponent<PlayerAttackBehaviour>();
+        playerBody = GetComponent<Transform>();
     }
+
     public void Start()
     {
         InitializeComponents();
@@ -42,7 +34,7 @@ public class PlayerParameters : MonoBehaviour
             BigData.Player = this;
     }
 
-    public void HandleDeath()
+    private void HandleDeath()
     {
         BigData.ReloadData();
         SceneManager.LoadScene("MazeDeadScreen");
@@ -50,15 +42,15 @@ public class PlayerParameters : MonoBehaviour
 
     public void Update()
     {
-        if (!PlayerLiveBehaviour.IsAlive)
+        if (!playerLiveBehaviour.IsAlive)
         {
             HandleDeath();
             Destroy(playerContainer);
         }
     }
 
-    public void GetDamage(double Damage)
+    public void GetDamage(double damage)
     {
-        PlayerLiveBehaviour.GetDamage(Damage);
+        playerLiveBehaviour.GetDamage(damage);
     }
 }

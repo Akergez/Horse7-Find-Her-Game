@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerAttackBehaviour : MonoBehaviour
 {
-    [SerializeField] private PlayerParameters Parameters;
+    private PlayerParameters Parameters;
     public int Increment = 4;
-    public float AttackRadius => Parameters.AttackRadius;
+    public float AttackRadius => Parameters.attackRadius;
+    [SerializeField] public LayerMask monsterMask;
 
 
     public void Start()
@@ -42,16 +43,21 @@ public class PlayerAttackBehaviour : MonoBehaviour
                 }
             }
 
-            foreach (var monster in BigData.MonstersMap.Where(x =>
-                         HelpMethods.IsNear(x.Key.transform, transform, AttackRadius))) //ToDo разхардкорить
+            foreach (var monster in GetMonstersNear()) //ToDo разхардкорить
             {
                 var damageCoef = (Increment * 0.25 * 20);
-                monster.Value.GetDamage(damageCoef);
+                var monsterLiveBeh = monster.gameObject.GetComponent<MonsterLiveBehaviour>();
+                monsterLiveBeh.GetDamage(damageCoef);
             }
 
             Increment = 0;
 
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    private Collider2D[] GetMonstersNear()
+    {
+        return Physics2D.OverlapCircleAll(Parameters.transform.position, AttackRadius, monsterMask);
     }
 }

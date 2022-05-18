@@ -1,39 +1,28 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Classes;
 using DefaultNamespace;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 public class MonsterNavigationBehaviour : MonoBehaviour
 {
-    public MonsterParameters MonsterParameters;
-
+    public MonsterParameters monsterParameters;
     private DirectionFinder _directionFinder;
-    private bool _coroutineStarted;
-
     public NavMeshAgent nmAgent;
-    [SerializeField] public List<Transform> PatrolPoints;
-    public int PatrolingIndex;
 
-    public float PatrolingDistance => MonsterParameters.PatrolingDistance;
+    private float PatrolingDistance => monsterParameters.patrolingDistance;
+    private float PlayerInFOVVisibilityDistance => monsterParameters.playerInFOVVisibilityDistance;
+    private int PlayerVisibilityAngle => monsterParameters.playerVisibilityAngle;
+    private float PlayerBackVisibilityAngle => monsterParameters.playerBackVisibilityAngle;
+    private Transform PlayerBody => BigData.Player.playerBody;
 
-    public float PlayerInFOVVisibilityDistance => MonsterParameters.PlayerInFOVVisibilityDistance;
-    public int PlayerVisibilityAngle => MonsterParameters.PlayerVisibilityAngle;
-    public float PlayerBackVisibilityAngle => MonsterParameters.PlayerBackVisibilityAngle;
-
-    public Transform PlayerBody => BigData.Player.PlayerBody;
-
+    [SerializeField] public List<Transform> patrolPoints;
+    [SerializeField] public int patrolingIndex;
     [SerializeField] public LayerMask playerMask;
     [SerializeField] public LayerMask wallsMask;
 
     public void Start()
     {
-        MonsterParameters = GetComponent<MonsterParameters>();
+        monsterParameters = GetComponent<MonsterParameters>();
         SetupNavMeshAgent();
     }
 
@@ -47,38 +36,50 @@ public class MonsterNavigationBehaviour : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (HelpMethods.IsNear(transform, PatrolPoints[PatrolingIndex],
+        if (HelpMethods.IsNear(transform, patrolPoints[patrolingIndex],
                 PatrolingDistance))
-            if (PatrolingIndex + 1 < PatrolPoints.Count)
-                PatrolingIndex++;
+            if (patrolingIndex + 1 < patrolPoints.Count)
+                patrolingIndex++;
             else
-                PatrolingIndex = 0;
-        nmAgent.SetDestination(PatrolPoints[PatrolingIndex].position);
+                patrolingIndex = 0;
+        nmAgent.SetDestination(patrolPoints[patrolingIndex].position);
         if (IsPlayerVisible())
             nmAgent.SetDestination(PlayerBody.position);
     }
 
-    public bool IsPlayerVisible()
+    private bool IsPlayerVisible()
+    {
+        return IsPlayerInRadius(PlayerInFOVVisibilityDistance)
+               && IsPlayerInFOV()
+               && !IsObstacleBetweenPlayerAndMonster()
+               || IsPlayerInRadius(PlayerBackVisibilityAngle);
+    }
+
+    private bool IsPlayerInRadius(float radius)
+    {
+        return HelpMethods.IsNear(PlayerBody.transform, transform, radius);
+    }
+
+    private bool IsPlayerInFOV()
+    {
+        return _directionFinder.MovementVector.GetAngle(PlayerBody.transform.position - transform.position) <
+               PlayerVisibilityAngle / 2;
+    }
+
+    private bool IsObstacleBetweenPlayerAndMonster()
     {
         var nearColliders = Physics2D.OverlapCircleAll(transform.position, PlayerInFOVVisibilityDistance, playerMask);
-        var IsObstacleBetweenPlayerAndMonster = true;
+        var isObstacleBetweenPlayerAndMonster = true;
         if (nearColliders.Length != 0)
         {
             var distance = (nearColliders[0].transform.position - transform.position).Length();
             var target = nearColliders[0].transform;
             var position = transform.position;
             var directionToTarget = (target.position - position).normalized;
-            IsObstacleBetweenPlayerAndMonster =
+            isObstacleBetweenPlayerAndMonster =
                 Physics2D.Raycast(position, directionToTarget, (float) distance, wallsMask);
         }
 
-        var playerPosition = PlayerBody.transform.position;
-        var IsPlayerNear = HelpMethods.IsNear(PlayerBody.transform, transform, PlayerInFOVVisibilityDistance);
-        var IsPlayerInFOV = _directionFinder.MovementVector.GetAngle(playerPosition - transform.position) <
-                            PlayerVisibilityAngle / 2;
-        return IsPlayerNear
-               && IsPlayerInFOV
-               && !IsObstacleBetweenPlayerAndMonster
-               || HelpMethods.IsNear(PlayerBody, transform, PlayerBackVisibilityAngle);
+        return isObstacleBetweenPlayerAndMonster;
     }
 }

@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8103423724147127904}
   - component: {fileID: 4273067981001869840}
   - component: {fileID: 8544615150133275656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProgressBarRenderer (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 7656589101261704474}
   - component: {fileID: 8933032587409303348}
   - component: {fileID: 3986668605934992557}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterToRender: 1
-  MonsterParameters: {fileID: 2005084505703700693}
+  monsterParameters: {fileID: 2005084505703700693}
 --- !u!1 &1946845224043593642
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 2264929750236164651}
   - component: {fileID: 3740293222604892320}
   - component: {fileID: 8290299300209789324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterToRender: 2
-  MonsterParameters: {fileID: 2005084505703700693}
+  monsterParameters: {fileID: 2005084505703700693}
 --- !u!1 &2922844724078596941
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2033528506178035555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BattleProgressCircleContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 3984489993700051808}
   - component: {fileID: 3984489993700051102}
   - component: {fileID: 3984489993700051103}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProgressBarRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +748,8 @@ GameObject:
   - component: {fileID: 3742249020783856868}
   - component: {fileID: 1300655482259113800}
   - component: {fileID: 3835472333631726881}
-  m_Layer: 0
+  - component: {fileID: 6696631423530521222}
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,16 +784,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9617e7512be4d46951bff7bd8ef1573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialHealthPoints: 100
   basicDamage: 20
-  Transform: {fileID: 0}
   attackRadius: 0.7
-  PatrolingDistance: 1
-  PlayerInFOVVisibilityDistance: 5
-  PlayerVisibilityAngle: 120
-  PlayerBackVisibilityAngle: 1
-  monsterInitializer: {fileID: 3742249020783856868}
-  _monsterAttackBehaviour: {fileID: 1300655482259113800}
-  _monsterNavigationBehaviour: {fileID: 3835472333631726881}
+  patrolingDistance: 0.4
+  playerInFOVVisibilityDistance: 4
+  playerVisibilityAngle: 120
+  playerBackVisibilityAngle: 1
+  monsterContainer: {fileID: 3984489994134952769}
+  monsterAttackBehaviour: {fileID: 0}
+  monsterLiveBehaviour: {fileID: 0}
+  monsterBody: {fileID: 0}
 --- !u!212 &3984489994134952828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -941,8 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c704db41b694bacadd523ee92980ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterBody: {fileID: 7870244824474344789}
-  MonsterParameters: {fileID: 2005084505703700693}
+  monsterParameters: {fileID: 0}
 --- !u!114 &1300655482259113800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9aca715d23641b38984e2e94db29091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterParameters: {fileID: 2005084505703700693}
+  monsterParameters: {fileID: 0}
   attackReadyness: 0
 --- !u!114 &3835472333631726881
 MonoBehaviour:
@@ -969,20 +970,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfcb1c081d941c283149e415762f310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonsterParameters: {fileID: 2005084505703700693}
+  monsterParameters: {fileID: 0}
   nmAgent: {fileID: 8716959312544742779}
-  PatrolPoints:
+  patrolPoints:
   - {fileID: 4870284377580197652}
-  - {fileID: 6102238157016117250}
   - {fileID: 8367288783372989764}
   - {fileID: 4740383329381007804}
-  PatrolingIndex: 0
+  - {fileID: 6102238157016117250}
+  patrolingIndex: 0
   playerMask:
     serializedVersion: 2
     m_Bits: 64
   wallsMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &6696631423530521222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3984489994134952769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18498207e520488c8520ca9f5d778ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 0
+  isAlive: 1
+  monsterParameters: {fileID: 2005084505703700693}
 --- !u!1 &4161773461643955122
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5265134912930310897}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthProgressBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1047,7 @@ GameObject:
   - component: {fileID: 5765203986146701392}
   - component: {fileID: 1067396061366405846}
   - component: {fileID: 827922913397520950}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}

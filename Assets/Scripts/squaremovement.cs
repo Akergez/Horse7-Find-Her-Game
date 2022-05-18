@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
 
 public class squaremovement : MonoBehaviour
 {

@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using Enums;
 using Unity.Mathematics;
 using UnityEngine;
 

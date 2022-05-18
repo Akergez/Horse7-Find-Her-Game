@@ -1973,7 +1973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToDisable: {fileID: 1237301563}
-  secondsBeforeDisable: 0
+  secondsBeforeDisable: 6
 --- !u!1 &562955293
 GameObject:
   m_ObjectHideFlags: 0
@@ -21640,11 +21640,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.57
+      value: 0.103
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.407
+      value: 3.284
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21689,6 +21689,10 @@ PrefabInstance:
     - target: {fileID: 4670420331937441759, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_Offset.x
       value: -0.0029518902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249557391360363347, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: HungerRecalculateFrequency
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}

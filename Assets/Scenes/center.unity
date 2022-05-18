@@ -29777,14 +29777,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8f084686e9c504cbdbaae593022621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPopup: {fileID: 0}
+  StartPopup: {fileID: 883459981}
   Dialogues:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1712553159}
+  - {fileID: 76976590}
+  - {fileID: 388581789}
+  - {fileID: 457062653}
+  - {fileID: 744909750}
+  - {fileID: 975369237}
   Object: {fileID: 1230879333}
 --- !u!114 &1230879338
 MonoBehaviour:

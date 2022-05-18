@@ -12,6 +12,8 @@ namespace DefaultNamespace
         [SerializeField] public bool UseNull;
         [SerializeField] public float UpdateFrequency;
 
+        public Animator animator;
+
         public void Start()
         {
             _previousPosition = body.position;
@@ -29,6 +31,13 @@ namespace DefaultNamespace
                 else
                     yield return new WaitForSeconds(UpdateFrequency);
             }
+        }
+
+        void Update()
+        {
+            animator.SetFloat("Horizontal", MovementVector.x);
+            animator.SetFloat("Vertical", MovementVector.y);
+            animator.SetFloat("Speed", MovementVector.sqrMagnitude);
         }
     }
 }

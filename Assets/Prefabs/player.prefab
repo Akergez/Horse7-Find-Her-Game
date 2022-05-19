@@ -1229,8 +1229,9 @@ MonoBehaviour:
   initialHunger: 100
   baseSpeed: 1
   runningSpeed: 1.5
+  foodEffectivety: 10
   foodCount: 0
-  moneyCount: 10
+  moneyCount: 0
   animator: {fileID: 0}
   playerBody: {fileID: 0}
   playerMovementBehaviour: {fileID: 0}
@@ -1251,6 +1252,7 @@ MonoBehaviour:
   Parameters: {fileID: 0}
   rb: {fileID: 0}
   movement: {x: 0, y: 0}
+  Speed: 0
 --- !u!114 &8249557391360363347
 MonoBehaviour:
   m_ObjectHideFlags: 0

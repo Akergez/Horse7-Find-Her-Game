@@ -77,8 +77,14 @@ public class PlayerParameters : MonoBehaviour
         foodCount += points;
     }
 
-    public void IncreaseMoney(int points)
+    public bool IncreaseMoney(int points)
     {
-        moneyCount += points;
+        if (moneyCount + points >= 0)
+        {
+            moneyCount += points;
+            return true;
+        }
+
+        return false;
     }
 }

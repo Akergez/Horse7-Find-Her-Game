@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="dofiga vsego">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HeapOfSmthBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HeapOfSmthBehaviour.cs.meta" afterDir="false" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="food and money heap">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerLiveBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerLiveBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/center.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/popupCafe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/popupCafe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SomeStupidManGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SomeStupidManGame.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,7 @@
       <workItem from="1652867102097" duration="333000" />
       <workItem from="1652875381264" duration="11000000" />
       <workItem from="1652961096237" duration="2443000" />
-      <workItem from="1652963784871" duration="1191000" />
+      <workItem from="1652963784871" duration="4221000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -322,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652963532081</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="food and money heap">
+      <created>1652965212523</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1652965212523</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +352,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="commit" />
     <MESSAGE value="finish start scene" />
     <MESSAGE value="fix canvases" />
     <MESSAGE value="add on destroy" />
@@ -369,7 +376,8 @@
     <MESSAGE value="huge refactoring" />
     <MESSAGE value="remove BigData.cs, change monster detection by player" />
     <MESSAGE value="dofiga vsego" />
-    <option name="LAST_COMMIT_MESSAGE" value="dofiga vsego" />
+    <MESSAGE value="food and money heap" />
+    <option name="LAST_COMMIT_MESSAGE" value="food and money heap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -401,17 +409,43 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs</url>
-          <line>37</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" initialLine="37" containingFunctionPresentation="method 'FixedUpdate'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/HeapOfSmthBehaviour.cs</url>
+          <line>11</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/HeapOfSmthBehaviour.cs" initialLine="11" containingFunctionPresentation="method 'OnCollisionEnter2D'">
             <startOffsets>
-              <option value="1052" />
+              <option value="371" />
             </startOffsets>
             <endOffsets>
-              <option value="1085" />
+              <option value="420" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Blockpost.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs" initialLine="15" containingFunctionPresentation="method 'OnCollisionEnter2D'">
+            <startOffsets>
+              <option value="377" />
+            </startOffsets>
+            <endOffsets>
+              <option value="425" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameters.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameters.cs" initialLine="64" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="1891" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1943" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,14 +4,12 @@ public class popupCafe : MonoBehaviour
 {
     public static bool isPopupMenu;
     public GameObject popMenu;
-    public GameObject coins;
-    public GameObject noCoins;
     public Collision2D collision;
     int visitCount;
 
     private void OnCollisionEnter2D(Collision2D newCollision)
     {
-        if (newCollision.gameObject.CompareTag("Player") && visitCount == 0)
+        if (newCollision.gameObject.CompareTag("Player"))
         {
             collision = newCollision;
             Debug.Log("Popup Table");
@@ -23,7 +21,7 @@ public class popupCafe : MonoBehaviour
             }
             
         }
-        
+
     }
     public void Resume()
     {
@@ -42,15 +40,15 @@ public class popupCafe : MonoBehaviour
     public void PressNo()
     {
         Resume();
-        Destroy(popMenu);
+        popMenu.SetActive(false);
+        isPopupMenu = false;
     }
 
     public void PressYes()
     {
-        coins.SetActive(false);
-        noCoins.SetActive(true);
-        
-        Destroy(popMenu);
+        if(collision.gameObject.GetComponent<PlayerParameters>().IncreaseMoney(-5))
+            collision.gameObject.GetComponent<PlayerParameters>().IncreaseFood(1);
+
         Time.timeScale = 1f;
     }
 

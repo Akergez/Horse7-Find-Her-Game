@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="add final">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/SimpleSceneLoader.cs" afterDir="false" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="a lot of changes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FinalDialog.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FinalDialog.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze/NavMesh-NavMesh 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze/NavMesh-NavMesh 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Blockpost.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Blockpost.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/CameraMove.cs" afterDir="false" />
@@ -30,45 +19,24 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelpMethods.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/HelpMethods.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/HideSprite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideSprite.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/HideSprite.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hunger.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hunger.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Learning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Learning.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Learning.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Learning.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/TeleportWithPopUpBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/TeleportWithPopUpBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadStartScene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadStartScene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/SimpleSceneLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/LoadScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/LoadScene.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeLever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeLever.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PauseMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PauseMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/People.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/People.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerLiveBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerLiveBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PoliceMove.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PoliceMove.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupSister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupSister.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupSister.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupSister.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupTable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupTable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupTable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/SceneLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/SceneLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/Vector3Extensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/Vector3Extensions.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/popupCafe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/popupCafe.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/popupCafe.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/popupCafe.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/squaremovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/squaremovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,14 +60,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Blockpost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/e2/9094f897/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
@@ -111,9 +77,8 @@
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/6c/4c16b27c/ScriptableRuntimeReflectionSystemWrapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupTable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze/NavMesh-NavMesh 1.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HelpClasses/HelpMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/55/011288a4/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scripts/Blockpost.cs" root0="SKIP_HIGHLIGHTING" />
@@ -129,7 +94,6 @@
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterAttackBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/popupCafe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/0a/cc503fc6/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
@@ -454,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652991000529</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="a lot of changes">
+      <created>1652998346054</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1652998346054</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +447,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="update Maze" />
     <MESSAGE value="update" />
     <MESSAGE value="fix angles again" />
     <MESSAGE value="again fix" />
@@ -501,7 +471,8 @@
     <MESSAGE value="smth" />
     <MESSAGE value="add door script" />
     <MESSAGE value="add final" />
-    <option name="LAST_COMMIT_MESSAGE" value="add final" />
+    <MESSAGE value="a lot of changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="a lot of changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

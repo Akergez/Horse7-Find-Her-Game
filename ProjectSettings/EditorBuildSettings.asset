@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MazeDeadScreen.unity
     guid: ef0ff602def1b6e62b70125a1b9b6bbe
+  - enabled: 1
+    path: Assets/Scenes/CenterDeadScreen.unity
+    guid: 9ae67c87e194463d3ab3928f98e5cdbd
   m_configObjects: {}

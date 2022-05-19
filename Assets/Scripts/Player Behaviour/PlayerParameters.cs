@@ -10,6 +10,8 @@ public class PlayerParameters : MonoBehaviour
     [SerializeField] public double initialHunger;
     [SerializeField] public float baseSpeed;
     [SerializeField] public float runningSpeed;
+    [SerializeField] public double foodEffectivety;
+
 
     [SerializeField] public int foodCount;
     [SerializeField] public int moneyCount;
@@ -57,10 +59,26 @@ public class PlayerParameters : MonoBehaviour
             HandleDeath();
             Destroy(playerContainer);
         }
+
+        if (Input.GetKeyDown(KeyCode.Q) && foodCount > 0)
+        {
+            playerLiveBehaviour.IncreaseHunger(foodEffectivety);
+            foodCount -= 1;
+        }
     }
 
     public void GetDamage(double damage)
     {
         playerLiveBehaviour.GetDamage(damage);
+    }
+
+    public void IncreaseFood(int points)
+    {
+        foodCount += points;
+    }
+
+    public void IncreaseMoney(int points)
+    {
+        moneyCount += points;
     }
 }

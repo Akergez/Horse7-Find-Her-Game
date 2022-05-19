@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -18,6 +19,10 @@ public class PlayerLiveBehaviour : MonoBehaviour
         StartCoroutine(HungerRecalculateCoroutine());
     }
 
+    public void Update()
+    {
+    }
+
     public void OnDestroy()
     {
         StopCoroutine(HungerRecalculateCoroutine());
@@ -31,7 +36,7 @@ public class PlayerLiveBehaviour : MonoBehaviour
             RecalculateHunger();
         }
     }
-    
+
     public void RecalculateHunger()
     {
         if (Parameters.MovementVector != Vector3.zero)
@@ -53,5 +58,10 @@ public class PlayerLiveBehaviour : MonoBehaviour
             HealtPoints = 0;
         if (HealtPoints == 0)
             IsAlive = false;
+    }
+
+    public void IncreaseHunger(double points)
+    {
+        Hunger += points;
     }
 }

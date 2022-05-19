@@ -11,6 +11,9 @@ public class PlayerParameters : MonoBehaviour
     [SerializeField] public float baseSpeed;
     [SerializeField] public float runningSpeed;
 
+    [SerializeField] public int foodCount;
+    [SerializeField] public int moneyCount;
+
     public Animator animator;
     public Transform playerBody;
 
@@ -19,6 +22,7 @@ public class PlayerParameters : MonoBehaviour
     public PlayerAttackBehaviour playerAttackBehaviour;
 
     public Vector3 MovementVector => playerMovementBehaviour.movement;
+    public static PlayerDataSaver Data;
 
     private void InitializeComponents()
     {
@@ -27,9 +31,16 @@ public class PlayerParameters : MonoBehaviour
         playerLiveBehaviour = GetComponent<PlayerLiveBehaviour>();
         playerAttackBehaviour = GetComponent<PlayerAttackBehaviour>();
         playerBody = GetComponent<Transform>();
+        if (Data != null)
+        {
+            initialHp = Data.Hp;
+            initialHunger = Data.Hunger;
+            foodCount = Data.FoodCount;
+            moneyCount = Data.MoneyCount;
+        }
     }
 
-    public void Start()
+    public void Awake()
     {
         InitializeComponents();
     }

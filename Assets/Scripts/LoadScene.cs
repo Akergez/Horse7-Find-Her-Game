@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -6,9 +7,11 @@ public class LoadScene : MonoBehaviour
 {
     public GameObject popCenter;
     private Collision2D _collision;
+
     [FormerlySerializedAs("SceneToLoad")] [SerializeField]
     public string sceneToLoad;
 
+    [SerializeField] public PlayerParameters playerBody;
 
 
     private void OnCollisionEnter2D(Collision2D newCollision)
@@ -19,7 +22,6 @@ public class LoadScene : MonoBehaviour
             Debug.Log("!");
             ShowPopupCenter();
         }
-        
     }
 
     private void Resume()
@@ -32,9 +34,15 @@ public class LoadScene : MonoBehaviour
     {
         popCenter.SetActive(true);
     }
+
     public void PressYes()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        if (playerBody != null)
+            SceneLoader.LoadScene(sceneToLoad, new PlayerDataSaver(playerBody));
+        else
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
         Resume();
     }
 

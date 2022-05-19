@@ -20392,6 +20392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popCenter: {fileID: 937600667}
   sceneToLoad: SampleScene
+  playerBody: {fileID: 0}
 --- !u!61 &45727794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24809,6 +24810,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966037972631854792, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: moneyCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

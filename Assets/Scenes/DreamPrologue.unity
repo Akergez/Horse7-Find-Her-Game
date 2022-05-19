@@ -806,6 +806,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.0029518902
       objectReference: {fileID: 0}
+    - target: {fileID: 5966037972631854792, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: moneyCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
 --- !u!1001 &189572280
@@ -3025,6 +3029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popCenter: {fileID: 1878896941}
   sceneToLoad: CenterPrologue
+  playerBody: {fileID: 0}
 --- !u!114 &997677156
 MonoBehaviour:
   m_ObjectHideFlags: 0

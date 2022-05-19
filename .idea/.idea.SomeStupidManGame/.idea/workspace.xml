@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="add door script">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/center.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="add final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +24,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Blockpost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/6c/4c16b27c/ScriptableRuntimeReflectionSystemWrapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PopupTable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,6 +35,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/55/011288a4/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scripts/Blockpost.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b29983a7d024e6c922d3ba40ccc74e96600/43/f12fdf68/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/09/dd8b1c35/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,16 +43,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterNavigationBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/95/3ce3f1c2/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterLiveBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/e2/9094f897/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MazeLever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterAttackBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/popupCafe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/0a/cc503fc6/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/cb/4b7deb4f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
@@ -372,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652982896314</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add final">
+      <created>1652991000529</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1652991000529</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +405,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="monster_prefab" />
     <MESSAGE value="update Maze" />
     <MESSAGE value="update" />
     <MESSAGE value="fix angles again" />
@@ -419,7 +429,8 @@
     <MESSAGE value="Fix cafe buying, fix dialogue" />
     <MESSAGE value="smth" />
     <MESSAGE value="add door script" />
-    <option name="LAST_COMMIT_MESSAGE" value="add door script" />
+    <MESSAGE value="add final" />
+    <option name="LAST_COMMIT_MESSAGE" value="add final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

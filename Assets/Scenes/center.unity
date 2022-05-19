@@ -37091,6 +37091,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5966037972631854792, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: moneyCount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6231824777185380155, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_Layer
       value: 6

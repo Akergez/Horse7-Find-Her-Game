@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class Blockpost : MonoBehaviour
     private int _visitCount;
 
     [SerializeField] public PlayerParameters Player;
+    [SerializeField] public bool useCollision;
 
     private void OnCollisionEnter2D(Collision2D newCollision)
     {
@@ -25,6 +27,14 @@ public class Blockpost : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        if (!useCollision)
+        {
+            ShowPopupStart();
+        }
+    }
+
     private void Resume()
     {
         StartPopup.SetActive(false);
@@ -33,14 +43,16 @@ public class Blockpost : MonoBehaviour
 
     private void ResumeSummary()
     {
-        Player.playerMovementBehaviour.SetPlayerFreezed(false);
+        if (useCollision)
+            Player.playerMovementBehaviour.SetPlayerFreezed(false);
         Dialogues.Last().SetActive(false);
     }
 
     private void ShowPopupStart()
     {
-        Player.playerMovementBehaviour.SetPlayerFreezed(true);
-        StartPopup.SetActive(Player.playerMovementBehaviour.IsPlayerFreezed);
+        if (useCollision)
+            Player.playerMovementBehaviour.SetPlayerFreezed(true);
+        StartPopup.SetActive(true);
     }
 
     public void PressNext(int index)

@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CenterDeadScreen.unity
     guid: 9ae67c87e194463d3ab3928f98e5cdbd
+  - enabled: 1
+    path: Assets/Scenes/FinalDialog.unity
+    guid: cb2f597670173bf5cb63000c404aef2a
   m_configObjects: {}

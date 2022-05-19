@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +11,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
     public bool IsPlayerFreezed { get; private set; }
 
     public float Speed;
+
+    [SerializeField] public bool isIn2D;
+    [SerializeField] public float jumpForse;
+
+    bool inAir;
 
     public void Start()
     {
@@ -26,10 +32,24 @@ public class PlayerMovementBehaviour : MonoBehaviour
     void HandleControls()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (!isIn2D)
+            movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        if (Input.GetKeyDown(KeyCode.Space) && !inAir && isIn2D)
+        {
+            StartCoroutine(JumpCoroutine());
+            //rb.AddForce(Vector2.up*jumpForse);
+           inAir = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isIn2D)
+            inAir = false;
     }
 
     void FixedUpdate()
@@ -40,7 +60,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
             Speed *= Parameters.runningSpeed;
         else
             Speed *= Parameters.baseSpeed;
-    
+
         if (!IsPlayerFreezed)
             rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * Speed));
     }
@@ -49,5 +69,20 @@ public class PlayerMovementBehaviour : MonoBehaviour
     public void SetPlayerFreezed(bool isFreezed)
     {
         IsPlayerFreezed = isFreezed;
+    }
+
+    public IEnumerator JumpCoroutine()
+    {
+        var speed = 800;
+        var gs = rb.gravityScale;
+        rb.gravityScale = 0;
+        while (speed>0)
+        {
+            rb.AddForce(Vector2.up*speed);
+            speed -= 50;
+            yield return null;
+        }
+
+        rb.gravityScale = gs;
     }
 }

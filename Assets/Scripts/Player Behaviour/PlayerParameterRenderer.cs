@@ -1,3 +1,5 @@
+using System;
+using System.Reflection;
 using Enums;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +19,7 @@ public class PlayerParameterRenderer : MonoBehaviour
         switch (toDisplay)
         {
             case EntityParameter.Hunger:
-                _progressBar.fillAmount = (float) (PlayerParameters.playerLiveBehaviour.Hunger / 5 * 0.05);
+                _progressBar.fillAmount = (float) (Math.Truncate(PlayerParameters.playerLiveBehaviour.Hunger / 10) * 0.10);
                 break;
             case EntityParameter.Hp:
                 _progressBar.fillAmount = (float) (PlayerParameters.playerLiveBehaviour.HealtPoints / 5 * 0.05);

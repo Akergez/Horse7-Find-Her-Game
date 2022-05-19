@@ -14,7 +14,7 @@ public class MazeDoor : MonoBehaviour
     [SerializeField] public GameObject reaction;
     void Update()
     {
-        isOpen = !levels.Select(x => x.isOff).Contains(true);
+        //isOpen = !levels.Select(x => x.isOff).Contains(true);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

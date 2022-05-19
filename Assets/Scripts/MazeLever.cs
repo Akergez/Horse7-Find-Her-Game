@@ -19,6 +19,7 @@ public class MazeLever : MonoBehaviour
     float distance;
 
     Rigidbody2D rb;
+    public bool isOff = true;
 
     void Start()
     {
@@ -60,5 +61,6 @@ public class MazeLever : MonoBehaviour
     {
         leverOn.SetActive(false);
         leverOff.SetActive(true);
+        isOff = false;
     }
 }

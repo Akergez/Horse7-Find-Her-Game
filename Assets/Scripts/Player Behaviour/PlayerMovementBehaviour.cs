@@ -56,7 +56,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         var speedMultiplier = movement.x != 0 && movement.y != 0 ? 0.75f : 1f;
         Speed = speedMultiplier;
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && Parameters.playerLiveBehaviour.Hunger > Parameters.initialHunger / 10)
             Speed *= Parameters.runningSpeed;
         else
             Speed *= Parameters.baseSpeed;

@@ -237,6 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc13fd2c58ef78e3e849558b9ab10bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: Menu
+  timeout: 2
+  loadFromStart: 1
 --- !u!1 &936647673
 GameObject:
   m_ObjectHideFlags: 0

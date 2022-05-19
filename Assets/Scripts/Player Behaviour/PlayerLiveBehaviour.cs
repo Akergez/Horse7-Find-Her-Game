@@ -48,6 +48,9 @@ public class PlayerLiveBehaviour : MonoBehaviour
         if (Hunger <= HealtPoints) return;
         HealtPoints++;
         Hunger -= 1;
+
+        if (Hunger < 0)
+            Hunger = 0;
     }
 
     public void GetDamage(double damage)

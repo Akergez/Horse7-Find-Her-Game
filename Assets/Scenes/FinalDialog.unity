@@ -754,6 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4711304003638833223}
+  - component: {fileID: 4711304003638833224}
   m_Layer: 0
   m_Name: Blockpost System
   m_TagString: Untagged
@@ -777,6 +778,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4711304003638833224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711304003638833222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc13fd2c58ef78e3e849558b9ab10bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Menu
+  timeout: 0
+  loadFromStart: 0
 --- !u!1 &4711304003659669042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,9 +2928,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4711304005189980141}
-        m_TargetAssemblyTypeName: Blockpost, Assembly-CSharp
-        m_MethodName: Cancel
+      - m_Target: {fileID: 4711304003638833224}
+        m_TargetAssemblyTypeName: LoadStartScene, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

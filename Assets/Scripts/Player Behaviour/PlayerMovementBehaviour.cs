@@ -9,6 +9,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
     public Vector2 movement;
     public bool IsPlayerFreezed { get; private set; }
 
+    public float Speed;
+
     public void Start()
     {
         movement = Vector2.zero;
@@ -33,14 +35,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         var speedMultiplier = movement.x != 0 && movement.y != 0 ? 0.75f : 1f;
-        var speed = speedMultiplier;
+        Speed = speedMultiplier;
         if (Input.GetKey(KeyCode.LeftShift))
-            speed *= Parameters.runningSpeed;
+            Speed *= Parameters.runningSpeed;
         else
-            speed *= Parameters.baseSpeed;
+            Speed *= Parameters.baseSpeed;
     
         if (!IsPlayerFreezed)
-            rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * speed));
+            rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * Speed));
     }
 
 

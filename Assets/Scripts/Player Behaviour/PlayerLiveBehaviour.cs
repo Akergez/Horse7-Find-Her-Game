@@ -41,7 +41,7 @@ public class PlayerLiveBehaviour : MonoBehaviour
     {
         if (Parameters.MovementVector != Vector3.zero)
             if (Hunger > 0)
-                Hunger -= 1;
+                Hunger -= Input.GetKey(KeyCode.LeftShift) ? 3 : 1;
             else if (HealtPoints >= 0)
                 HealtPoints -= 1;
 

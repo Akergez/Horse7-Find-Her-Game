@@ -1793,9 +1793,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: AttackCD
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1569352195}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: basicDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2110136713875343060, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.07
@@ -16719,9 +16727,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: AttackCD
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1569352195}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: basicDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4610942934112214400, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -18993,9 +19009,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: AttackCD
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1569352195}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: basicDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2110136713875343060, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.82
@@ -19401,12 +19425,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: AttackCD
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1569352195}
+    - target: {fileID: 2005084505703700693, guid: 23c459dc4b66155658ee165f12571510, type: 3}
+      propertyPath: basicDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2110136713875343060, guid: 23c459dc4b66155658ee165f12571510, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.39

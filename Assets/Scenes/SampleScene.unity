@@ -22392,10 +22392,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 872179356169188635, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 354.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1316177424206575788, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1459341153289900508, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 353.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441728, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_Name
       value: player
@@ -22467,6 +22475,14 @@ PrefabInstance:
     - target: {fileID: 4670420331937441759, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_Offset.x
       value: -0.0029518902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231824779089771695, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -754.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231824779089771695, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 383
       objectReference: {fileID: 0}
     - target: {fileID: 8249557391360363347, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: HungerRecalculateFrequency

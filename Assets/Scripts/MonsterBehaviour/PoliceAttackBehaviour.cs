@@ -11,7 +11,7 @@ public class PoliceAttackBehaviour : EnemyAttackBehaviour
         if (HelpMethods.IsNear(monsterParameters.monsterBody.transform, monsterParameters.playerBody.transform,
                 AttackRadius))
         {
-            SceneManager.LoadScene("center");
+            SceneManager.LoadScene("CenterDeadScreen");
         }
     }
 }

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="improve final">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="clean up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -417,7 +412,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653016598101</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix levels">
+      <created>1653020244304</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1653020244304</updated>
+    </task>
+    <task id="LOCAL-00040" summary="clean up">
+      <created>1653020366312</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1653020366312</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,8 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix scenes teleport" />
-    <MESSAGE value="fix" />
     <MESSAGE value="Add death screen, death possibility, navMeshes" />
     <MESSAGE value="refactor Blockpost.cs" />
     <MESSAGE value="Refactoring, fix battle, fix colliders" />
@@ -464,7 +471,9 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="return some useless scripts" />
     <MESSAGE value="improve final" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve final" />
+    <MESSAGE value="fix levels" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

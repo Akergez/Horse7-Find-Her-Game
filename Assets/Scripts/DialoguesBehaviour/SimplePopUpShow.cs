@@ -9,13 +9,15 @@ namespace DefaultNamespace.DialoguesBehaviour
         public GameObject popup;
         [SerializeField] public Transform player;
         [SerializeField] public float distance;
-     
+        public bool isPlayerNear;
+
         private void OnCollisionEnter2D(Collision2D newCollision)
         {
-            if (!isPopup && newCollision.gameObject.CompareTag("Player") && !isPopupDestroyed)
+            if (!isPopup && newCollision.gameObject.CompareTag("Player"))
             {
                 isPopup = true;
-                popup.SetActive(isPopup);
+                if (!isPopupDestroyed)
+                    popup.SetActive(isPopup);
             }
         }
 

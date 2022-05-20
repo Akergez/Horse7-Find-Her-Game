@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="clean up" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="add background">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SomeStupidManGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SomeStupidManGame.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,52 +30,27 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/random.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/e2/9094f897/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/2d.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/6c/4c16b27c/ScriptableRuntimeReflectionSystemWrapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze/NavMesh-NavMesh 1.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/55/011288a4/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameters.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scripts/Blockpost.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b29983a7d024e6c922d3ba40ccc74e96600/43/f12fdf68/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/09/dd8b1c35/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterNavigationBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/95/3ce3f1c2/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterLiveBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterAttackBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scripts/MazeMechanism.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/6c/4c16b27c/ScriptableRuntimeReflectionSystemWrapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/0a/cc503fc6/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/cb/4b7deb4f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/55/011288a4/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2b29983a7d024e6c922d3ba40ccc74e96600/43/f12fdf68/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/random.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/09/dd8b1c35/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterNavigationBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/29/fa7a5ff7/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scripts/Player Behaviour/PlayerParameterRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/95/3ce3f1c2/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterLiveBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32535d1468a4438590fa602324b09cf013ca00/e2/9094f897/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -99,10 +80,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="66122">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="66122" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,6 +126,7 @@
       <workItem from="1652875381264" duration="11000000" />
       <workItem from="1652961096237" duration="2443000" />
       <workItem from="1652963784871" duration="5026000" />
+      <workItem from="1653022833262" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -426,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653020366312</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add background">
+      <created>1653020744518</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1653020744518</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +437,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add death screen, death possibility, navMeshes" />
     <MESSAGE value="refactor Blockpost.cs" />
     <MESSAGE value="Refactoring, fix battle, fix colliders" />
     <MESSAGE value="CleanUp" />
@@ -473,7 +461,8 @@
     <MESSAGE value="improve final" />
     <MESSAGE value="fix levels" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="add background" />
+    <option name="LAST_COMMIT_MESSAGE" value="add background" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,27 +470,13 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs</url>
           <line>35</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="35" containingFunctionPresentation="method 'OnCollisionExit2D'">
-            <startOffsets>
-              <option value="953" />
-            </startOffsets>
-            <endOffsets>
-              <option value="953" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="35" containingFunctionPresentation="method 'OnCollisionExit2D'" />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs</url>
           <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="25" containingFunctionPresentation="method 'OnCollisionEnter2D'">
-            <startOffsets>
-              <option value="854" />
-            </startOffsets>
-            <endOffsets>
-              <option value="855" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="25" containingFunctionPresentation="method 'OnCollisionEnter2D'" />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">

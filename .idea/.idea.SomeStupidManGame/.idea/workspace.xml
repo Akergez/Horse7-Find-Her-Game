@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="a lot of changes">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Blockpost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blockpost.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Blockpost.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/CameraMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMove.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/CameraMove.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DirectionFinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionFinder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DirectionFinder.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DisableElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DisableElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DisableElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DisableElement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DreamDisableNote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/DreamDisableNote.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DreamDisableNote.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/DreamDisableNote.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/Fader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/Fader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelpMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/HelpMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelpMethods.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/HelpMethods.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/HideSprite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HideSprite.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/HideSprite.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Learning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Learning.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Learning.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/Learning.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/LoadScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadScene.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/LoadScene.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeLever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeLever.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PauseMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PauseMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupSister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupSister.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupSister.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupSister.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PopupTable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/PopupTable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/SceneLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/Vector3Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector3Extensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelpClasses/Vector3Extensions.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/popupCafe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/popupCafe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/popupCafe.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/popupCafe.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -425,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652998346054</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactoring">
+      <created>1652999347833</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1652999347833</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +418,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="update" />
     <MESSAGE value="fix angles again" />
     <MESSAGE value="again fix" />
     <MESSAGE value="fix scenes teleport" />
@@ -472,7 +442,8 @@
     <MESSAGE value="add door script" />
     <MESSAGE value="add final" />
     <MESSAGE value="a lot of changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="a lot of changes" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

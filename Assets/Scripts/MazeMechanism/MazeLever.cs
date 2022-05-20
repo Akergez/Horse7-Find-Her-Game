@@ -10,6 +10,7 @@ public class MazeLever : MonoBehaviour
     public GameObject leverOff;
     public bool isUsed;
     public SimplePopUpShow PopUpShow;
+    public static bool popUpShown;
     
 
     public bool isOff = true;
@@ -21,11 +22,14 @@ public class MazeLever : MonoBehaviour
 
     void Update()
     {
+        if(popUpShown)
+            PopUpShow.DestroyPopUp();
         if (Input.GetKeyDown(KeyCode.E) && !isUsed && PopUpShow.isPopup)
         {
             PopUpShow.isPopupDestroyed = true;
             SwitchLever();
             isUsed = true;
+            popUpShown = true;
             PopUpShow.DestroyPopUp();
         }
     }

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="return some useless scripts">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs.meta" afterDir="false" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="improve final">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2d.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2d.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +39,7 @@
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/2d.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/center.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
@@ -414,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653013971712</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="improve final">
+      <created>1653016598101</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1653016598101</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +439,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="again fix" />
     <MESSAGE value="fix scenes teleport" />
     <MESSAGE value="fix" />
     <MESSAGE value="Add death screen, death possibility, navMeshes" />
@@ -461,24 +463,12 @@
     <MESSAGE value="a lot of changes" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="return some useless scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="return some useless scripts" />
+    <MESSAGE value="improve final" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameters.cs</url>
-          <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameters.cs" initialLine="64" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="1891" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1943" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs</url>
           <line>35</line>
@@ -506,17 +496,17 @@
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs</url>
-          <line>13</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" initialLine="13" containingFunctionPresentation="method 'OnCollisionEnter2D'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs</url>
+          <line>26</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" initialLine="26" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="401" />
+              <option value="559" />
             </startOffsets>
             <endOffsets>
-              <option value="402" />
+              <option value="623" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

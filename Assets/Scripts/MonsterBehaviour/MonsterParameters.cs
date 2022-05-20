@@ -12,6 +12,7 @@ public class MonsterParameters : MonoBehaviour
     [SerializeField] public float playerBackVisibilityAngle;
     [SerializeField] public float navigationSpeed;
     [SerializeField] public float followingSpeed;
+    [SerializeField] public float monsterStamiinaInSeconds;
     
     [SerializeField] public GameObject monsterContainer;
     [SerializeField] public PlayerParameters playerBody;
@@ -22,6 +23,7 @@ public class MonsterParameters : MonoBehaviour
     public MonsterLiveBehaviour monsterLiveBehaviour;
     
     public Transform monsterBody;
+    public Rigidbody2D Rigidbody2D;
 
     public void Start()
     {
@@ -31,5 +33,6 @@ public class MonsterParameters : MonoBehaviour
         monsterAttackBehaviour = GetComponent<EnemyAttackBehaviour>();
         _monsterNavigationBehaviour = GetComponent<MonsterNavigationBehaviour>();
         monsterLiveBehaviour = GetComponent<MonsterLiveBehaviour>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class MonsterNavigationBehaviour : MonoBehaviour
     private int PlayerVisibilityAngle => monsterParameters.playerVisibilityAngle;
     private float PlayerBackVisibilityAngle => monsterParameters.playerBackVisibilityAngle;
     private Transform PlayerBody => monsterParameters.playerBody.playerBody;
+
+    private float Stamina => monsterParameters.monsterStamiinaInSeconds;
+    public bool isFollowing;
 
     [SerializeField] public List<Transform> patrolPoints;
     [SerializeField] public int patrolingIndex;
@@ -46,15 +50,28 @@ public class MonsterNavigationBehaviour : MonoBehaviour
             else
                 patrolingIndex = 0;
         target = patrolPoints[patrolingIndex].position;
-        nmAgent.SetDestination(patrolPoints[patrolingIndex].position);
         if (IsPlayerVisible())
         {
             nmAgent.SetDestination(PlayerBody.position);
-            nmAgent.speed = monsterParameters.followingSpeed;
+            if (!isFollowing)
+                StartCoroutine(SpeedIncreaseCoroutine());
             target = PlayerBody.position;
+            isFollowing = true;
+        }
+        else
+        {
+            nmAgent.SetDestination(patrolPoints[patrolingIndex].position);
+            isFollowing = false;
         }
 
         distanceToTarget = (monsterParameters.transform.position - target).Length();
+    }
+
+    public IEnumerator SpeedIncreaseCoroutine()
+    {
+        nmAgent.speed = monsterParameters.followingSpeed;
+        yield return new WaitForSeconds(Stamina);
+        nmAgent.speed = monsterParameters.navigationSpeed;
     }
 
     private bool IsPlayerVisible()

@@ -795,6 +795,7 @@ MonoBehaviour:
   playerBackVisibilityAngle: 1
   navigationSpeed: 0.5
   followingSpeed: 1
+  monsterStamiinaInSeconds: 2
   monsterContainer: {fileID: 3984489994134952769}
   playerBody: {fileID: 0}
   monsterAttackBehaviour: {fileID: 0}
@@ -864,7 +865,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002833277, y: 0.02123745}
+  m_Offset: {x: 0.004557699, y: 0.04288942}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5129777, y: 0.022591386}
@@ -875,7 +876,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3243367, y: 0.10501914}
+  m_Size: {x: 0.48693132, y: 0.14832309}
   m_EdgeRadius: 0
 --- !u!50 &3984489994134952831
 Rigidbody2D:
@@ -889,7 +890,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.014740875
+  m_Mass: 0.031256124
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -978,6 +979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterParameters: {fileID: 0}
   nmAgent: {fileID: 8716959312544742779}
+  isFollowing: 0
   patrolPoints:
   - {fileID: 4870284377580197652}
   - {fileID: 8367288783372989764}

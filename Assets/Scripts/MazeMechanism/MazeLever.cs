@@ -1,59 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace.DialoguesBehaviour;
 using UnityEngine;
 
 public class MazeLever : MonoBehaviour
 {
-    public static int leverCount;
-    public bool isPopupDestroyed;
     public GameObject leverOn;
     public GameObject leverOff;
     public bool isUsed;
-    public bool isPopup;
-    public GameObject popup;
+    public SimplePopUpShow PopUpShow;
     
-    [SerializeField]
-    Transform player;
 
-    [SerializeField]
-    float distance;
-
-    Rigidbody2D rb;
     public bool isOff = true;
 
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void OnCollisionEnter2D(Collision2D newCollision)
-    {
-        if (!isPopup && newCollision.gameObject.CompareTag("Player") && !isPopupDestroyed)
-        {
-            isPopup = true;
-            popup.SetActive(isPopup);
-        }
+        PopUpShow = GetComponent<SimplePopUpShow>();
     }
 
     void Update()
     {
-        float distToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (distToPlayer > distance)
+        if (Input.GetKeyDown(KeyCode.E) && !isUsed && PopUpShow.isPopup)
         {
-            isPopup = false;
-            popup.SetActive(isPopup);
-            return;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.E) && !isUsed)
-        {
-            isPopupDestroyed = true;
-            isPopup = false;
-            popup.SetActive(isPopup);
-            leverCount++;
+            PopUpShow.isPopupDestroyed = true;
             SwitchLever();
             isUsed = true;
+            PopUpShow.DestroyPopUp();
         }
     }
 

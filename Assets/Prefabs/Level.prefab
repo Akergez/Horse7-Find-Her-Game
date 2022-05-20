@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 3214495556940223512}
   - component: {fileID: 3214495556940223519}
   - component: {fileID: 3214495556940223513}
+  - component: {fileID: 6134768385088446967}
   - component: {fileID: 5123216226690912545}
   m_Layer: 9
   m_Name: "\u0440\u044B\u0447\u0430\u0433 on 1"
@@ -196,15 +197,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfaf5b687d4f274c8da8440e4a1a02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPopupDestroyed: 0
   leverOn: {fileID: 3214495556940223517}
   leverOff: {fileID: 3214495557351126102}
   isUsed: 0
+  PopUpShow: {fileID: 0}
+  isOff: 1
+--- !u!114 &6134768385088446967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214495556940223517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa9946c6a34970ae971a53a9e2af23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   isPopup: 0
+  isPopupDestroyed: 0
   popup: {fileID: 3214495558780579973}
   player: {fileID: 0}
   distance: 1
-  isOff: 0
 --- !u!61 &5123216226690912545
 BoxCollider2D:
   m_ObjectHideFlags: 0

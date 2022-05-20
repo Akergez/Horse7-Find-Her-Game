@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="refactoring" />
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="return some useless scripts">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2d.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2d.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +69,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonsterBehaviour/MonsterAttackBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scenes/Maze.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///var/home/akergez/repos/SomeStupidManGame/Assets/Scripts/MazeMechanism.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerParameterRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695d1cc93cca45069c528c15c9fdd7493e2800/0a/cc503fc6/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -396,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652999347833</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="return some useless scripts">
+      <created>1653013971712</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1653013971712</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +436,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix angles again" />
     <MESSAGE value="again fix" />
     <MESSAGE value="fix scenes teleport" />
     <MESSAGE value="fix" />
@@ -443,7 +460,8 @@
     <MESSAGE value="add final" />
     <MESSAGE value="a lot of changes" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="return some useless scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="return some useless scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -462,27 +480,14 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs</url>
-          <line>18</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/ElevatorBehaviour.cs" initialLine="14" containingFunctionPresentation="method 'OnCollisionEnter2D'">
-            <startOffsets>
-              <option value="536" />
-            </startOffsets>
-            <endOffsets>
-              <option value="573" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs</url>
           <line>35</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="35" containingFunctionPresentation="method 'OnCollisionExit2D'">
             <startOffsets>
-              <option value="934" />
+              <option value="953" />
             </startOffsets>
             <endOffsets>
-              <option value="934" />
+              <option value="953" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="46" />
@@ -492,13 +497,26 @@
           <line>25</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="25" containingFunctionPresentation="method 'OnCollisionEnter2D'">
             <startOffsets>
-              <option value="688" />
+              <option value="854" />
             </startOffsets>
             <endOffsets>
-              <option value="689" />
+              <option value="855" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" initialLine="13" containingFunctionPresentation="method 'OnCollisionEnter2D'">
+            <startOffsets>
+              <option value="401" />
+            </startOffsets>
+            <endOffsets>
+              <option value="402" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

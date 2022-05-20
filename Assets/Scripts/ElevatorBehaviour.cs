@@ -14,9 +14,22 @@ namespace DefaultNamespace
 
         public Collider2D collider => Player.GetComponent<Collider2D>();
 
+        [SerializeField] public GameObject popUp;
+
         public void OnCollisionEnter2D(Collision2D collision)
         {
-            StartCoroutine(GettingUpCoroutine());
+            popUp.SetActive(true);
+        }
+
+        public void Update()
+        {
+            if (popUp.activeSelf && Input.GetKeyDown(KeyCode.E))
+                StartCoroutine(GettingUpCoroutine());
+        }
+
+        public void OnCollisionExit2D(Collision2D collision)
+        {
+            popUp.SetActive(false);
         }
 
         public IEnumerator GettingUpCoroutine()
@@ -25,7 +38,7 @@ namespace DefaultNamespace
             sr.sortingOrder = 1;
             while (rb.position.y < 60)
             {
-                rb.AddForce(Vector2.up*100);
+                rb.AddForce(Vector2.up * 100);
                 yield return null;
             }
 

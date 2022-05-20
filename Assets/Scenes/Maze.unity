@@ -1453,6 +1453,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1997346989}
+    - target: {fileID: 6134768385088446967, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1997346989}
     - target: {fileID: 6547121117999947986, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
       propertyPath: m_Name
       value: Level (1)
@@ -16027,6 +16031,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134768385088446967, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1997346989}
     - target: {fileID: 6547121117999947986, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
       propertyPath: m_Name
       value: Level (4)
@@ -16931,6 +16939,7 @@ GameObject:
   - component: {fileID: 607988486}
   - component: {fileID: 607988485}
   - component: {fileID: 607988487}
+  - component: {fileID: 607988488}
   m_Layer: 0
   m_Name: "\u0434\u0432\u0435\u0440\u044C \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442"
   m_TagString: Untagged
@@ -17044,14 +17053,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   door: {fileID: 607988482}
+  isOpenByEditor: 0
   levels:
   - {fileID: 1198488717}
   - {fileID: 596467972}
   - {fileID: 1573623839}
   - {fileID: 1906639581}
   - {fileID: 522018689}
-  reactionForNotAllLevelsUsed: {fileID: 896473152}
   reactionForAllLevelsUsed: {fileID: 1728900446}
+  firstPopUpShow: {fileID: 0}
 --- !u!114 &607988487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17067,6 +17077,23 @@ MonoBehaviour:
   sceneToLoad: 2D
   timeout: 0
   loadFromStart: 0
+--- !u!114 &607988488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607988482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa9946c6a34970ae971a53a9e2af23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPopup: 0
+  isPopupDestroyed: 0
+  popup: {fileID: 896473152}
+  player: {fileID: 1997346989}
+  distance: 1
 --- !u!1001 &612093275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27645,6 +27672,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134768385088446967, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1997346989}
     - target: {fileID: 6547121117999947986, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
       propertyPath: m_Name
       value: Level (2)
@@ -33459,11 +33490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.56
+      value: -4.88
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.81
+      value: 0.943
       objectReference: {fileID: 0}
     - target: {fileID: 4670420331937441753, guid: 86ca9c2ac3f53f5848af7171cbace316, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41581,6 +41612,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134768385088446967, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1997346989}
     - target: {fileID: 6547121117999947986, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
       propertyPath: m_Name
       value: Level (3)
@@ -42956,6 +42991,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3214495556940223513, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1997346989}
+    - target: {fileID: 6134768385088446967, guid: d0c2cef4d7e34d839ab34ac6c9de3f07, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1997346989}

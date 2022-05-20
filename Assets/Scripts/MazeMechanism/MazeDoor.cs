@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DefaultNamespace.DialoguesBehaviour;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,29 +12,19 @@ public class MazeDoor : MonoBehaviour
     public int leverCount => levels.Count;
     public GameObject door;
 
+    [SerializeField] public bool isOpenByEditor;
     [SerializeField] public List<MazeLever> levels;
-    [SerializeField] public GameObject reactionForNotAllLevelsUsed;
     [SerializeField] public GameObject reactionForAllLevelsUsed;
+    public SimplePopUpShow firstPopUpShow;
 
+    void Start()
+    {
+        firstPopUpShow = GetComponent<SimplePopUpShow>();
+    }
     void Update()
     {
         isOpen = !levels.Select(x => x.isOff).Contains(true);
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (isOpen)
-                reactionForAllLevelsUsed.SetActive(true);
-            else
-                reactionForNotAllLevelsUsed.SetActive(true);
-        }
-    }
-
-    public void OnCollisionExit2D(Collision2D other)
-    {
-        reactionForAllLevelsUsed.SetActive(false);
-        reactionForNotAllLevelsUsed.SetActive(false);
+        if (isOpen || isOpenByEditor)
+           firstPopUpShow.popup = reactionForAllLevelsUsed;
     }
 }

@@ -13,7 +13,8 @@ public class PlayerAttackBehaviour : MonoBehaviour
     public void Start()
     {
         Parameters = GetComponent<PlayerParameters>();
-        StartCoroutine(AttackCoroutine());
+        if (!Parameters.playerMovementBehaviour.isIn2D)
+            StartCoroutine(AttackCoroutine());
     }
 
     public void OnDestroy()

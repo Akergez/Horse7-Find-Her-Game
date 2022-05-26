@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterParameters: {fileID: 0}
   nmAgent: {fileID: 0}
+  isFollowing: 0
   patrolPoints:
   - {fileID: 8018480196257192689}
   - {fileID: 5737491107890786747}
@@ -283,11 +284,13 @@ MonoBehaviour:
   playerBackVisibilityAngle: 1
   navigationSpeed: 0.5
   followingSpeed: 1
+  monsterStamiinaInSeconds: 9000
   monsterContainer: {fileID: 8018480196900250973}
   playerBody: {fileID: 0}
   monsterAttackBehaviour: {fileID: 0}
   monsterLiveBehaviour: {fileID: 0}
   monsterBody: {fileID: 0}
+  Rigidbody2D: {fileID: 0}
 --- !u!114 &1121632234792933208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +368,7 @@ MonoBehaviour:
   body: {fileID: 0}
   UseNull: 0
   UpdateFrequency: 0.5
+  animator: {fileID: 0}
 --- !u!114 &8018480195590307529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +385,7 @@ MonoBehaviour:
   body: {fileID: 0}
   UseNull: 0
   UpdateFrequency: 0
+  animator: {fileID: 0}
 --- !u!1 &8018480196257192694
 GameObject:
   m_ObjectHideFlags: 0

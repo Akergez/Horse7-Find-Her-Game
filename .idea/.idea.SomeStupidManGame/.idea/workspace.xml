@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="">
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="Add death background">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Policeman 1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Policeman 1 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CenterDeadScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CenterDeadScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CenterPrologue.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CenterPrologue.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MazeDeadScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MazeDeadScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/center.unity" afterDir="false" />
@@ -136,6 +137,7 @@
       <workItem from="1653156391076" duration="208000" />
       <workItem from="1653485976580" duration="269000" />
       <workItem from="1653486265058" duration="224000" />
+      <workItem from="1653596111100" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -438,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653078026283</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Add death background">
+      <created>1653597085079</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1653597085079</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +469,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="CleanUp" />
     <MESSAGE value="Change Monster 1 1.prefab. Add basic Patroling Mechanism" />
     <MESSAGE value="Add MonsterVisibilityAngle, Add DirectionFinder.cs" />
     <MESSAGE value="Add RayCast for Monsters" />
@@ -485,7 +493,8 @@
     <MESSAGE value="add background" />
     <MESSAGE value="fix canvas" />
     <MESSAGE value="fix sorting and colliders on center.unity and CenterPrologue.unity, fix walls corner on Maze.unity, fix monsters, add monster knock-back and stamina, fix Maze.unity colliders, change fonts, fix canvases, fix popUps on 2d scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix sorting and colliders on center.unity and CenterPrologue.unity, fix walls corner on Maze.unity, fix monsters, add monster knock-back and stamina, fix Maze.unity colliders, change fonts, fix canvases, fix popUps on 2d scene" />
+    <MESSAGE value="Add death background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add death background" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

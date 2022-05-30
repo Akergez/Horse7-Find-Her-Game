@@ -9,7 +9,6 @@ namespace DefaultNamespace.DialoguesBehaviour
         public GameObject popup;
         [SerializeField] public Transform player;
         [SerializeField] public float distance;
-        public bool isPlayerNear;
 
         private void OnCollisionEnter2D(Collision2D newCollision)
         {

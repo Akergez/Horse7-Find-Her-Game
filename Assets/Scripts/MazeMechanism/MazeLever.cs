@@ -11,6 +11,8 @@ public class MazeLever : MonoBehaviour
     public bool isUsed;
     public SimplePopUpShow PopUpShow;
     public static bool popUpShown;
+    public GameObject firstPopUp;
+    [SerializeField]public GameObject commonPopUp;
     
 
     public bool isOff = true;
@@ -23,7 +25,7 @@ public class MazeLever : MonoBehaviour
     void Update()
     {
         if(popUpShown)
-            PopUpShow.DestroyPopUp();
+            PopUpShow.popup = commonPopUp;
         if (Input.GetKeyDown(KeyCode.E) && !isUsed && PopUpShow.isPopup)
         {
             PopUpShow.isPopupDestroyed = true;

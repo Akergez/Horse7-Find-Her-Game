@@ -3,6 +3,7 @@ namespace Enums
     public enum InventoryItemType
     {
         Food,
-        Money
+        Money,
+        Arm
     }
 }

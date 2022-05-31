@@ -15,6 +15,7 @@ public class PlayerParameters : MonoBehaviour
 
     [SerializeField] public int foodCount;
     [SerializeField] public int moneyCount;
+    [SerializeField] public int armCount;
 
     public Animator animator;
     public Transform playerBody;
@@ -86,5 +87,10 @@ public class PlayerParameters : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void IncreaseArm(int points)
+    {
+        foodCount += points;
     }
 }

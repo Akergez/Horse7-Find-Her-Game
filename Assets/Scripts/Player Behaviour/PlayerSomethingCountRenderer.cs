@@ -13,6 +13,7 @@ namespace DefaultNamespace.Player_Behaviour
         [SerializeField] public InventoryItemType itemToRender;
         public int Food => playerParameters.foodCount;
         public int Money => playerParameters.moneyCount;
+        public int Arm => playerParameters.armCount;
 
         private Text Text;
 
@@ -30,6 +31,9 @@ namespace DefaultNamespace.Player_Behaviour
                     break;
                 case InventoryItemType.Money:
                     Text.text = Money.ToString();
+                    break;
+                case InventoryItemType.Arm:
+                    Text.text = Arm.ToString();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

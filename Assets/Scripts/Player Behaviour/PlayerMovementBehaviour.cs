@@ -15,6 +15,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
     [SerializeField] public bool isIn2D;
     [SerializeField] public float jumpForse;
 
+    private float hiddenSpeedMultiplier = 1;
+
     bool inAir;
 
     public void Start()
@@ -57,9 +59,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
         var speedMultiplier = movement.x != 0 && movement.y != 0 ? 0.75f : 1f;
         Speed = speedMultiplier;
         if (Input.GetKey(KeyCode.LeftShift) && Parameters.playerLiveBehaviour.Hunger > Parameters.initialHunger / 10)
-            Speed *= Parameters.runningSpeed;
+            Speed *= Parameters.runningSpeed * hiddenSpeedMultiplier;
         else
-            Speed *= Parameters.baseSpeed;
+            Speed *= Parameters.baseSpeed * hiddenSpeedMultiplier;
 
         if (!IsPlayerFreezed)
             rb.MovePosition(rb.position + movement * (Time.fixedDeltaTime * Speed));
@@ -73,16 +75,24 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     public IEnumerator JumpCoroutine()
     {
-        var speed = 800;
+        hiddenSpeedMultiplier /= 5;
+        var speed = 500;
         var gs = rb.gravityScale;
         rb.gravityScale = 0;
         while (speed>0)
         {
             rb.AddForce(Vector2.up*speed);
-            speed -= 50;
+            speed -= 30;
             yield return null;
         }
-
+        
+        while (speed<600)
+        {
+            rb.AddForce(Vector2.down*speed);
+            speed += 30;
+            yield return null;
+        }
         rb.gravityScale = gs;
+        hiddenSpeedMultiplier *= 5;
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Enums;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -11,9 +12,11 @@ namespace DefaultNamespace.Player_Behaviour
         [SerializeField] public PlayerParameters playerParameters;
 
         [SerializeField] public InventoryItemType itemToRender;
+
+        [SerializeField] public MazeDoor door;
         public int Food => playerParameters.foodCount;
         public int Money => playerParameters.moneyCount;
-        public int Arm => playerParameters.armCount;
+        public int Arm => door.levels.Count(x => !x.isOff);
 
         private Text Text;
 

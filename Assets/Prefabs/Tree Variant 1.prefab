@@ -59,5 +59,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Variant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9169351298248206058, guid: dee0fa25e3ef97654bfc19637f57f1ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169351298248206058, guid: dee0fa25e3ef97654bfc19637f57f1ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.065
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee0fa25e3ef97654bfc19637f57f1ba, type: 3}

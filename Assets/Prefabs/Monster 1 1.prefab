@@ -794,13 +794,14 @@ MonoBehaviour:
   playerVisibilityAngle: 120
   playerBackVisibilityAngle: 1
   navigationSpeed: 0.5
-  followingSpeed: 1
-  monsterStamiinaInSeconds: 2
+  followingSpeed: 1.2
+  monsterStamiinaInSeconds: 3
   monsterContainer: {fileID: 3984489994134952769}
   playerBody: {fileID: 0}
   monsterAttackBehaviour: {fileID: 0}
   monsterLiveBehaviour: {fileID: 0}
   monsterBody: {fileID: 0}
+  Rigidbody2D: {fileID: 0}
 --- !u!212 &3984489994134952828
 SpriteRenderer:
   m_ObjectHideFlags: 0

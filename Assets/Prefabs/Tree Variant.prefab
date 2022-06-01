@@ -55,6 +55,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2127614407367307878, guid: ff812f4c41b7ac74aad768df5c8cc093, type: 3}
+    - target: {fileID: 5122102256308526743, guid: a377734b3b496b4bf8aa20477ce75857, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7747433
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122102256308526743, guid: a377734b3b496b4bf8aa20477ce75857, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25646287
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122102256308526743, guid: a377734b3b496b4bf8aa20477ce75857, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122102256308526743, guid: a377734b3b496b4bf8aa20477ce75857, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1177
+      objectReference: {fileID: 0}
     - target: {fileID: 6567053130600334723, guid: a377734b3b496b4bf8aa20477ce75857, type: 3}
       propertyPath: m_Name
       value: Tree Variant

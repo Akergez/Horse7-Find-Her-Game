@@ -37,11 +37,12 @@ public class MonsterNavigationBehaviour : MonoBehaviour
         nmAgent = GetComponent<NavMeshAgent>();
         nmAgent.updateRotation = false;
         nmAgent.updateUpAxis = false;
+        nmAgent.speed = monsterParameters.navigationSpeed;
+
     }
 
     public void FixedUpdate()
     {
-        nmAgent.speed = monsterParameters.navigationSpeed;
         var target = patrolPoints[patrolingIndex].position;
         if (HelpMethods.IsNear(transform, patrolPoints[patrolingIndex],
                 PatrolingDistance))

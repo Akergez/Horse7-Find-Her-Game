@@ -3,9 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialoguesBehaviour/SimplePopUpShow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeLever.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2d/Cave Tileset/Brown_Tile_Terrain (16 x 16).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2d/Cave Tileset/Brown_Tile_Terrain (16 x 16).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2d.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2d.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CenterPrologue.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CenterPrologue.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/center.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerSomethingCountRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerSomethingCountRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DirectionFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DirectionFinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SomeStupidManGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SomeStupidManGame.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +90,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2951">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="2951" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -133,7 +143,9 @@
       <workItem from="1653486265058" duration="224000" />
       <workItem from="1653596111100" duration="1361000" />
       <workItem from="1653821071651" duration="45000" />
-      <workItem from="1653931124480" duration="1930000" />
+      <workItem from="1653931124480" duration="2309000" />
+      <workItem from="1654014589889" duration="13000" />
+      <workItem from="1654073773826" duration="6014000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -450,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653597103535</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="right  popup in levels">
+      <created>1653935610026</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1653935610026</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +491,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add MonsterVisibilityAngle, Add DirectionFinder.cs" />
     <MESSAGE value="Add RayCast for Monsters" />
     <MESSAGE value="Place monsters in Maze, Add back visibility, add 4 patrolPoints" />
     <MESSAGE value="some beautify" />
@@ -497,7 +515,8 @@
     <MESSAGE value="fix sorting and colliders on center.unity and CenterPrologue.unity, fix walls corner on Maze.unity, fix monsters, add monster knock-back and stamina, fix Maze.unity colliders, change fonts, fix canvases, fix popUps on 2d scene" />
     <MESSAGE value="Add death background" />
     <MESSAGE value="and some files" />
-    <option name="LAST_COMMIT_MESSAGE" value="and some files" />
+    <MESSAGE value="right  popup in levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="right  popup in levels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,12 +526,6 @@
           <line>35</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="35" containingFunctionPresentation="method 'OnCollisionExit2D'" />
           <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/MazeMechanism/MazeDoor.cs</url>
-          <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MazeDoor.cs" initialLine="25" containingFunctionPresentation="method 'OnCollisionEnter2D'" />
-          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

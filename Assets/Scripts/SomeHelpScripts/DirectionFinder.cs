@@ -23,7 +23,7 @@ namespace DefaultNamespace
         {
             while (true)
             {
-                MovementVector = body.position - _previousPosition;
+                MovementVector = (body.position - _previousPosition).RoundToDirectionVector();
                 _previousPosition = new Vector3(body.position.x, body.position.y, body.position.z);
                 if (UseNull)
                     yield return null;

@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="">
+    <list default="true" id="e296a703-14d1-4893-83b6-c6f7cedb6aa1" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SomeStupidManGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2d/Cave Tileset/Brown_Tile_Terrain (16 x 16).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2d/Cave Tileset/Brown_Tile_Terrain (16 x 16).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster 1 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2d.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2d.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CenterPrologue.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CenterPrologue.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maze.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/center.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerMovementBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerSomethingCountRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Behaviour/PlayerSomethingCountRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DirectionFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SomeHelpScripts/DirectionFinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SomeStupidManGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SomeStupidManGame.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +132,7 @@
       <workItem from="1653821071651" duration="45000" />
       <workItem from="1653931124480" duration="2309000" />
       <workItem from="1654014589889" duration="13000" />
-      <workItem from="1654073773826" duration="6014000" />
+      <workItem from="1654073773826" duration="7914000" />
     </task>
     <task id="LOCAL-00001" summary="monster hp">
       <created>1650363750953</created>
@@ -469,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653935610026</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fixes">
+      <created>1654081444627</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1654081444627</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add RayCast for Monsters" />
     <MESSAGE value="Place monsters in Maze, Add back visibility, add 4 patrolPoints" />
     <MESSAGE value="some beautify" />
     <MESSAGE value="Refactor PlayerBehaviour.cs, Add NavMesh to center, fix bugs with movement vector, fix hunger" />
@@ -516,7 +509,8 @@
     <MESSAGE value="Add death background" />
     <MESSAGE value="and some files" />
     <MESSAGE value="right  popup in levels" />
-    <option name="LAST_COMMIT_MESSAGE" value="right  popup in levels" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
